@@ -33,7 +33,7 @@ export default function NavBar() {
                         href={'/'}
                         className='-border border-bg4 group group-hover:border-orange group-hover:text-green w-fit pl-2 flex items-center gap-4 h-7 sm:h-12'
                     >
-                        <img src='/logo.png' alt='logo' className='w-full h-full object-contain' />
+                        <img src='/logo.png' alt='logo' className='w-12 h-12 object-contain' />
                         <p className='-border hidden sm:inline text-gray group-hover:text-green text-[22px] font-bold'>
                             zerogtiger
                         </p>

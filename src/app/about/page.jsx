@@ -4,7 +4,7 @@ export const metadata = {
     title: 'About | zerogtiger'
 }
 
-   export const preview = "About me Here is my resume an..."
+   export const preview = "About me Here is my resume a..."
 // export const preview = "This is Tiger Z. Ding's website ..."
 
 export default function About() {
