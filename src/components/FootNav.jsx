@@ -5,8 +5,6 @@ import { preview as aboutPreview } from "@/app/about/page";
 import Link from "next/link";
 
 export default function FootNav() {
-    console.log(homePreview);
-
     return (
         <footer className="-border mx-auto px-2 max-w-[53rem] mt-40 mb-10 z-20">
             <div className="flex border-2 border-bg2 rounded-[0.5rem] justify-center px-4 py-4">
