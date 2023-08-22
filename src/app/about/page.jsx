@@ -36,7 +36,7 @@ export default function About() {
                     <h2>About this website</h2>
                     <ul>
                         <li><div>
-                            This site was built using NextJS and Tailwind CSS.
+                            This site was built using NextJS and styled with Tailwind CSS.
                         </div></li>
                         <li><div>All articles found under <Link href={'content'}>content</Link> were rendered from markdown files using <Link href={'https://github.com/remarkjs/react-markdown'}>react-markdown</Link> with plugins associated with <Link href={'https://github.com/remarkjs/remark'}>remark</Link> and <Link href={'https://github.com/rehypejs/rehype/tree/main'}>rehype</Link>.</div></li>
                         <li><div>
