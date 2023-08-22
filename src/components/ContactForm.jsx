@@ -66,7 +66,7 @@ export default function ContactForm() {
                     to_email: process.env.NEXT_PUBLIC_DESTINATIOIN_EMAIL,
                     message: form.message,
                 },
-                1
+                process.env.NEXT_PUBLIC_EMAILJS_API_PUBLIC_KEY,
             )
             .then(
                 (response) => {
