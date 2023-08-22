@@ -1,27 +1,312 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 60 56 54;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb:   235 219 178;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: rgb(var(--background-end-rgb));
+    transition: all 400ms ease-in-out;
 }
+
+@layer base {
+    :root {
+        --color-bg-rgb: 251 241 199;
+        --color-bg1-rgb: 231 219 178;
+        --color-bg2-rgb: 213 196 161;
+        --color-bg3-rgb: 189 174 147;
+        --color-bg4-rgb: 168 153 132;
+        --color-fg-rgb: 60 56 54;
+        --color-gray-rgb: 146 131 116;
+        --color-red-rgb: 157 0 6;
+        --color-green-rgb: 12 116 14;
+        --color-yellow-rgb: 181 118 20;
+        --color-blue-rgb: 7 102 120;
+        --color-purple-rgb: 143 63 113;
+        --color-aqua-rgb: 66 123 88;
+        --color-orange-rgb: 175 58 3;
+    }
+
+    :root [class~="dark"] {
+        --color-bg-rgb: 40 40 40;
+        --color-bg1-rgb: 60 56 54;
+        --color-bg2-rgb: 80 73 69;
+        --color-bg3-rgb: 102 92 84;
+        --color-bg4-rgb: 124 111 100;
+        --color-fg-rgb: 235 219 178;
+        --color-gray-rgb: 146 131 116;
+        --color-red-rgb: 251 73 52;
+        --color-green-rgb: 184 187 38;
+        --color-yellow-rgb: 250 189 47;
+        --color-blue-rgb: 131 165 152;
+        --color-purple-rgb: 211 134 155;
+        --color-aqua-rgb: 142 192 124;
+        --color-orange-rgb: 254 128 25;
+    }
+    main code {
+        @apply font-iosevka;
+    }
+    main h1 {
+        @apply text-fg font-bold text-4xl mt-12;
+    }
+    main h2 {
+        @apply text-fg font-bold text-2xl mt-12;
+    }
+    main h3 {
+        @apply text-fg font-bold text-xl mt-8;
+    }
+    main p {
+        @apply text-fg my-5;
+    }
+    main ul {
+        @apply text-fg list-outside list-disc my-5;
+    }
+    main li {
+        @apply ml-6 my-2;
+    }
+    main li div {
+        @apply ml-2;
+    }
+    main blockquote {
+        @apply py-2 px-4 my-5 border-l-4 rounded-r-[0.5rem] border-gray bg-bg1 text-fg;
+    }
+    main blockquote * {
+        @apply text-fg my-0;
+    }
+    main img {
+        @apply my-5 w-full;
+    }
+    main details {
+        @apply py-2 px-4 my-5 border-4 rounded-[0.5rem] border-gray bg-bg1 text-fg;
+    }
+    main details summary {
+        @apply font-bold;
+    }
+    main a {
+        background-image: linear-gradient(
+        to right,
+        theme('colors.orange'),
+        theme('colors.orange') 50%,
+        theme('colors.blue') 50%
+        );
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline;
+        padding: 5px 0;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 300ms ease-in-out;
+    }
+
+    main a:before {
+        @apply bg-orange;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        transition: all 300ms ease-in-out;
+    }
+
+    main a:hover {
+        background-position: 0;
+        transition: all 50ms ease-out;
+    }
+
+    main a:hover::before {
+        width:100%;
+        transition: all 50ms ease-out;
+    }
+    nav * > *, nav *, footer * > *, footer * {
+        transition: all 300ms ease-in-out;
+    }
+    nav *:hover > *, footer *:hover > * {
+        transition: none;
+    }
+    nav *:hover, footer:hover {
+        transition: none;
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Thin.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Thin.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 100;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-ThinItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-ThinItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 200;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-ExtraLight.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-ExtraLight.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 200;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-ExtraLightItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-ExtraLightItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Light.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Light.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 300;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-LightItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-LightItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Regular.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Regular.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 400;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Italic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Italic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Medium.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Medium.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 500;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-MediumItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-MediumItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-SemiBold.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-SemiBold.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 600;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Bold.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Bold.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-BoldItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-BoldItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-ExtraBold.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-ExtraBold.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 800;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-Black.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-Black.woff?v=3.19") format("woff");
+    }
+    @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 900;
+        font-display: swap;
+        src: url("/fonts/inter/Inter-BlackItalic.woff2?v=3.19") format("woff2"),
+        url("/fonts/inter/Inter-BlackItalic.woff?v=3.19") format("woff");
+    }
+
+    @font-face {
+        font-family: "Sauce Code Pro";
+        src: url("/fonts/SauceCodeProNerdFont-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "Iosevka";
+        src: url("/fonts/Iosevka\ Term\ Nerd\ Font\ Complete.ttf");
+    }
+}
+
+/* @layer utilities { */
+/*     Link { */
+/*         @apply underline; */
+/*     } */
+/* } */
+
