@@ -38,14 +38,14 @@ export default function About() {
                         <li><div>
                             This site was built using NextJS and styled with Tailwind CSS.
                         </div></li>
-                        <li><div>All articles found under <Link href={'content'}>content</Link> were rendered from markdown files using <Link href={'https://github.com/remarkjs/react-markdown'}>react-markdown</Link> with plugins associated with <Link href={'https://github.com/remarkjs/remark'}>remark</Link> and <Link href={'https://github.com/rehypejs/rehype/tree/main'}>rehype</Link>.</div></li>
+                        <li><div>All articles found under <Link href={'content'}>content</Link> were rendered from markdown files using <Link target='_blank' href={'https://github.com/remarkjs/react-markdown'}>react-markdown</Link> with plugins associated with <Link target="_blank" href={'https://github.com/remarkjs/remark'}>remark</Link> and <Link target="_blank" href={'https://github.com/rehypejs/rehype/tree/main'}>rehype</Link>.</div></li>
                         <li><div>
-                            The font used for the majority of the content is <Link href={'https://github.com/rsms/inter'}>Inter</Link>, while <Link href={'https://github.com/be5invis/Iosevka'}>Iosevka</Link> was used for code snippets.
+                            The font used for the majority of the content is <Link target="_blank" href={'https://github.com/rsms/inter'}>Inter</Link>, while <Link target="_blank" href={'https://github.com/be5invis/Iosevka'}>Iosevka</Link> was used for code snippets.
                         </div></li>
                         <li><div>
                             The website's source code is available on GitHub.
                         </div></li>
-                        <li><div>Inspiration for the overall design and philosophy of this site came from <Link href={'https://www.ejmastnak.com/'}>Elijan J. Mastnak</Link>.</div></li>
+                        <li><div>Inspiration for the overall design and philosophy of this site came from <Link target="_blank" href={'https://www.ejmastnak.com/'}>Elijan J. Mastnak</Link>.</div></li>
                     </ul>
                 </section>
             </div >
