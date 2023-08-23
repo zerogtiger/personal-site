@@ -43,7 +43,7 @@ export default function About() {
                             The font used for the majority of the content is <Link target="_blank" href={'https://github.com/rsms/inter'}>Inter</Link>, while <Link target="_blank" href={'https://github.com/be5invis/Iosevka'}>Iosevka</Link> was used for code snippets.
                         </div></li>
                         <li><div>
-                            The website's source code is available on GitHub.
+                            The website's source code is available on <Link target="_blank" href={"https://github.com/zerogtiger/personal-site"}>GitHub</Link>.
                         </div></li>
                         <li><div>Inspiration for the overall design and philosophy of this site came from <Link target="_blank" href={'https://www.ejmastnak.com/'}>Elijan J. Mastnak</Link>.</div></li>
                     </ul>
