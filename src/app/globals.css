@@ -68,6 +68,9 @@ body {
     main p {
         @apply text-fg my-5;
     }
+    main li p {
+        @apply text-fg my-2;
+    }
     main ul {
         @apply text-fg list-outside list-disc my-5;
     }
@@ -87,10 +90,13 @@ body {
         @apply my-5 w-full;
     }
     main details {
-        @apply py-2 px-4 my-5 border-4 rounded-[0.5rem] border-gray bg-bg1 text-fg;
+        @apply py-2 px-4 my-5 border-2 rounded-[0.5rem] border-gray bg-bg1 text-fg;
     }
     main details summary {
         @apply font-bold;
+    }
+    main sub {
+        @apply text-fg;
     }
     main a {
         background-image: linear-gradient(

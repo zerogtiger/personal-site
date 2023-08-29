@@ -26,16 +26,15 @@ export default function Content() {
                         <p>
                             <span className="font-bold">Debian Linux on the go</span>
                             <br />
-                            Set up a portable Debian Linux environment with an iPad and a Raspbery Pi.
+                            Set up a portable Debian Linux environment with an iPad and a Raspberry Pi.
                         </p>
                     </div>
                 </section>
                 <section>
                     <h2>Projects</h2>
-                    <p>Coming soon: </p>
                     <div>
                         <p>
-                            <span className="font-bold">Photorealistic canyon water landscape</span>
+                            <Link href={'content/water_canyon_landscape/water_canyon_landscape'} className="font-bold">Photorealistic canyon water landscape</Link>
                             <br />
                             A photorealistic landscape created with procedural textures in Blender.
                         </p>

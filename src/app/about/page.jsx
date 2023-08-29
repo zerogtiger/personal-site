@@ -22,13 +22,13 @@ export default function About() {
                     </p>
                     <p>As for my background and interests, here they are: </p>
                     <ul>
-                        <li><div>I am a Computer Science undergraduate student at the University of Waterloo in Ontario, Canada.</div></li>
-                        <li><div>I went to high school in Markham, Ontario, wbere I picked up a keen focus on competitive mathematics as well as competitive programming. Some of my achievements include earning group III on the <Link target="_blank" href={'https://uwaterloo.ca/'}>CSMC</Link> honor roll, as well as qualifying for the <Link target="_blank" href={'https://cms.math.ca/competitions/cmo/'}>CMO</Link> in my senior year.</div></li>
-                        <li><div><p>I was given a <Link target="_blank" href={'https://www.raspberrypi.com/'}>Raspberry Pi</Link> at a young age, and started messing around with the Debian Linux distribution, though the adventure mostly hulted at trying to look cool by typing stuff in a terminal window.</p>
+                        <li><div><p>I am a Computer Science undergraduate student at the University of Waterloo in Ontario, Canada.</p></div></li>
+                        <li><div><p>I went to high school in Markham, Ontario, where I picked up a keen focus on competitive mathematics as well as competitive programming. Some of my achievements include earning group III on the <Link target="_blank" href={'https://uwaterloo.ca/'}>CSMC</Link> honor roll, as well as qualifying for the <Link target="_blank" href={'https://cms.math.ca/competitions/cmo/'}>CMO</Link> in my senior year.</p></div></li>
+                        <li><div><p>I was given a <Link target="_blank" href={'https://www.raspberrypi.com/'}>Raspberry Pi</Link> at a young age, and started messing around with the Debian Linux distribution, though the adventure mostly halted at trying to look cool by typing stuff in a terminal window.</p>
                             <p>When I finally discovered the world of open source in high school, I naturally became a Linux enthusiast beloving the (Neo)vim editor. Even now, I still work on projects involving the Raspberry Pi platform ever so often.</p>
                         </div></li>
                         <li><div>
-                            Some of my other hobbies include: 3D design, printing (with CAD software), and visualizations (via <Link target="_blank" href={'https://www.blender.org/'}>Blender</Link>); figure sketching; caligraphy (not done in English); photography; reading primarily classical fictional texts; as well as playing badminton and exercising.
+                            Some of my other hobbies include: 3D design, printing (with CAD software), and visualizations (via <Link target="_blank" href={'https://www.blender.org/'}>Blender</Link>); figure sketching; calligraphy (not done in English); photography; reading primarily classical fictional texts; as well as playing badminton and exercising.
                         </div></li>
                     </ul>
                 </section>

@@ -12,7 +12,7 @@ export default function Home() {
             <div className='mx-auto px-4 max-w-[52rem]'>
                 <h1> Home </h1>
                 <p>This is Tiger Z. Ding's website.</p>
-                <p>To avoid making this a glorified businesscard, this website was designed to be a relatively standalone platform featuring some unique content.</p>
+                <p>To avoid making this a glorified business card, this website was designed to be a relatively standalone platform featuring some unique content.</p>
                 <p className='font-bold'>If you are new here, here are the links to:</p>
                 <ul>
                     <li><div><Link href={'/content'}>Contents</Link> of this website</div></li>
