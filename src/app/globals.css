@@ -66,16 +66,19 @@ body {
         @apply text-fg font-bold text-xl mt-8;
     }
     main p {
-        @apply text-fg my-5;
+        @apply text-fg my-5 text-sm sm:text-base;
     }
     main li p {
-        @apply text-fg my-2;
+        @apply text-fg my-2 text-sm sm:text-base;
     }
     main ul {
-        @apply text-fg list-outside list-disc my-5;
+        @apply text-fg list-outside list-disc my-5 text-sm sm:text-base;
+    }
+    main ol {
+        @apply text-fg list-outside list-decimal my-5 text-sm sm:text-base;
     }
     main li {
-        @apply ml-6 my-2;
+        @apply ml-6 my-2 text-sm sm:text-base;
     }
     main li div {
         @apply ml-2;

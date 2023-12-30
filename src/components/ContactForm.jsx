@@ -5,154 +5,154 @@ import { useState, useRef } from "react";
 
 export default function ContactForm() {
 
-    const formRef = useRef();
-    const [form, setForm] = useState({
-        name: "",
-        email: "",
-        message: "",
+  const formRef = useRef();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [validMessage, setValidMessage] = useState(true);
+  const [validEmail, setValidEmail] = useState(true);
+  const [failed, setFailed] = useState(false);
+
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
     });
+  };
 
-    const [loading, setLoading] = useState(false);
-    const [validMessage, setValidMessage] = useState(true);
-    const [validEmail, setValidEmail] = useState(true);
-    const [failed, setFailed] = useState(false);
+  const handleSubmit = (e) => {
+    let invalid = false;
 
-    const [sent, setSent] = useState(false);
+    e.preventDefault();
+    setLoading(true);
+    setFailed(false);
 
-    const handleChange = (e) => {
-        const { target } = e;
-        const { name, value } = target;
+    if (form.message.trim().toLowerCase().length === 0) {
+      setValidMessage(false);
+      setLoading(false);
+      invalid = true;
+    } else {
+      setValidMessage(true);
+    }
+    if (!form.email.trim().toLowerCase().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+      setValidEmail(false);
+      setLoading(false);
+      invalid = true;
+    } else {
+      setValidEmail(true);
+    }
+    if (invalid)
+      return;
+    console.log(validMessage);
+    console.log(validEmail);
+    console.log('email sent');
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          to_name: process.env.NEXT_PUBLIC_TO_NAME,
+          from_email: form.email,
+          to_email: process.env.NEXT_PUBLIC_DESTINATIOIN_EMAIL,
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_API_PUBLIC_KEY,
+      )
+      .then(
+        (response) => {
+          setLoading(false);
+          setFailed(false);
+          setSent(true);
 
-        setForm({
-            ...form,
-            [name]: value,
-        });
-    };
-
-    const handleSubmit = (e) => {
-        let invalid = false;
-
-        e.preventDefault();
-        setLoading(true);
-        setFailed(false);
-
-        if (form.message.trim().toLowerCase().length === 0) {
-            setValidMessage(false);
-            setLoading(false);
-            invalid = true;
-        } else {
-            setValidMessage(true);
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          setFailed(true);
+          console.error(error);
         }
-        if (!form.email.trim().toLowerCase().match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
-            setValidEmail(false);
-            setLoading(false);
-            invalid = true;
-        } else {
-            setValidEmail(true);
-        }
-        if (invalid)
-            return;
-        console.log(validMessage);
-        console.log(validEmail);
-        console.log('email sent');
-        emailjs
-            .send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: form.name,
-                    to_name: process.env.NEXT_PUBLIC_TO_NAME,
-                    from_email: form.email,
-                    to_email: process.env.NEXT_PUBLIC_DESTINATIOIN_EMAIL,
-                    message: form.message,
-                },
-                process.env.NEXT_PUBLIC_EMAILJS_API_PUBLIC_KEY,
-            )
-            .then(
-                (response) => {
-                    setLoading(false);
-                    setFailed(false);
-                    setSent(true);
-
-                    setForm({
-                        name: "",
-                        email: "",
-                        message: "",
-                    });
-                },
-                (error) => {
-                    setLoading(false);
-                    setFailed(true);
-                    console.error(error);
-                }
-            );
-    };
-    return (
-        <div className="w-full border-2 rounded-[0.5rem] border-fg px-4 py-4">
-            <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className='w-full'
-            >
-                <label className='-border flex flex-col mb-4'>
-                    <span className='text-fg text-l mb-4'>Message</span>
-                    <textarea
-                        rows={7}
-                        name='message'
-                        value={form.message}
-                        onChange={handleChange}
-                        placeholder="Message"
-                        className='bg-bg1 py-4 px-6 placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
-                    />
-                </label>
-                <label className='flex flex-col mb-4'>
-                    <span className='text-fg text-l mb-4'>Your name</span>
-                    <input
-                        type='text'
-                        name='name'
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="Name"
-                        className='bg-bg1 py-4 px-6 placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
-                    />
-                </label>
-                <label className='flex flex-col mb-6'>
-                    <span className='text-fg text-l mb-4'>Email address</span>
-                    <input
-                        type='email'
-                        name='email'
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="address@email.com"
-                        className='bg-bg1 py-4 px-6 placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
-                    />
-                </label>
-                <div className="sm:flex">
-                    <button
-                        type='submit'
-                        className='bg-bg2 border-2 py-2 px-8 rounded-[0.5rem] text-center border-fg w-fit text-green font-bold text-l hover:bg-fg hover:text-bg'
-                    >
-                        {loading ? "Sending..." : "Send"}
-                    </button>
-                    <p className="my-auto px-4 -border text-yellow w-fit ">
-                        {validMessage && validEmail && !failed
-                            ? (sent ? 'Message sent, you\'ll likely receive a reply from me in the next 48 hours.' : '')
-                            : (failed
-                                ? 'Bruh, something broke. Please try again later or send me a direct email.'
-                                : ((!validMessage
-                                    ? 'Please send a non-empty message. '
-                                    : '') +
-                                    (!validEmail
-                                        ? 'Please enter a valid email.'
-                                        : '')
-                                )
-                            )
-                        }
-                    </p>
-                </div>
-            </form >
-        </div >
-    )
+      );
+  };
+  return (
+    <div className="w-full border-2 rounded-[0.5rem] border-fg px-4 py-4">
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className='w-full'
+      >
+        <label className='-border flex flex-col mb-4'>
+          <span className='text-fg text-sm sm:text-l mb-4'>Message</span>
+          <textarea
+            rows={7}
+            name='message'
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Message"
+            className='bg-bg1 py-4 px-6 text-sm sm:text placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
+          />
+        </label>
+        <label className='flex flex-col mb-4'>
+          <span className='text-fg text-sm sm:text-l mb-4'>Your name</span>
+          <input
+            type='text'
+            name='name'
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Name"
+            className='bg-bg1 py-4 px-6 text-sm sm:text placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
+          />
+        </label>
+        <label className='flex flex-col mb-6'>
+          <span className='text-fg text-sm sm:text-l mb-4'>Email address</span>
+          <input
+            type='email'
+            name='email'
+            value={form.email}
+            onChange={handleChange}
+            placeholder="address@email.com"
+            className='bg-bg1 py-4 px-6 text-sm sm:text placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
+          />
+        </label>
+        <div className="sm:flex">
+          <button
+            type='submit'
+            className='bg-bg2 border-2 py-2 px-8 rounded-[0.5rem] text-sm sm:text  text-center border-fg w-fit text-green font-bold text-l hover:bg-fg hover:text-bg'
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
+          <p className="my-auto px-4 -border text-yellow w-fit ">
+            {validMessage && validEmail && !failed
+              ? (sent ? 'Message sent, you\'ll likely receive a reply from me in the next 48 hours.' : '')
+              : (failed
+                ? 'Bruh, something broke. Please try again later or send me a direct email.'
+                : ((!validMessage
+                  ? 'Please send a non-empty message. '
+                  : '') +
+                  (!validEmail
+                    ? 'Please enter a valid email.'
+                    : '')
+                )
+              )
+            }
+          </p>
+        </div>
+      </form >
+    </div >
+  )
 }
 
 

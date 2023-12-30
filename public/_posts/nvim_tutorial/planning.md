@@ -1,0 +1,90 @@
+# Code as fast as thought: a beginner's guide to building a tailored editor with Neovim
+
+Sections:
+- Intro
+    - Goal of this series
+    - How these articles will work (tutorials to get started, link to external source that has more in depth view)
+    - Philosophy (why not vscode / why a vim style editor / why Neovim and not Helix or Vim)
+    - How to find help when you're stuck
+        - Slowly get better at Googling
+    - What it takes to finish (time commitment)
+    - Demo (GIFs)
+- Pre-requisites
+    - Goal of article
+    - OS
+        - Unix variant (preferred)
+        - Windows (figure stuff out yourself; may occationally have tips)
+            - Alternate solutions: VirtualBox (talk about personal experience)
+    - Install packages (ex. ripgrep)
+    - Command line usage (will use throughout the series with few exceptions in tips for Windows)
+        - Calling a command (ex. `vim *file name*` or `ls -la`)
+        - Manual command
+    - Shell scripting (with small tutorials)
+    - Understanding of the `$PATH` variable
+- Installation
+    - Goal of article
+    - OS based
+    - Build from source
+- (Neo)Vim Basics & Built-in features 
+    - Goal of article
+    - What the different terms mean: 
+        - Plugin
+        - Command line usage of `nvim` command
+    - Notation:
+        - `<...>` means the literal key on keyboard (Ex. `<Tab>`, `<Ctrl>`, `<Space>`)
+        - Command: type `:` before the command for it to show in nvim's command mode
+    - Mode (What are the modes, usage, entering and exiting them) (https://www.warp.dev/terminus/vim-modes)
+        - Graph of all modes
+        - Normal
+        - Command
+        - Insert
+        - Replace
+        - Visual
+    - Vim Motions (point to `:Tutor`)
+        - Structure of "count" "motion" "argument"
+        - Moving around (`hjkl`, jumping forward, backwards)
+        - Undo / redo
+        - Insertion
+        - Deletion
+        - Replacement
+        - Visual select
+        - Copy & pasting (to different registers)
+    - Commands
+        - Difference between capitalized and lowercase first letter in commands
+        - quit out of editor
+        - write file
+        - Search for match
+        - Search and replace
+        - increment / decrement numbers
+        - `<tab>` to autocomplete the command / show list of commands that start with the given
+    - Built-in features (small overview)
+        - Help tags
+            - Guide navigating help tags
+        - Swap file
+        - Health
+        - Global undo history
+        - Installing plugins without a plugin manager
+        - Macros
+        - (Builtin) Autocompletion
+        - 
+    - Lua
+- The Plugin system
+    - Goal of article
+    - Why plugins
+    - Plugin manager
+    - How Neovim starts up and how it looks for files
+    - How to install plugin
+    - How to read a Github repo for nvim plugin
+- Running code
+    - Goal of article
+    - Lua basics
+    - Writing a custom code runner in Lua
+- Tips and further reading
+    - YouTube sources
+        - The Primagen
+        - 
+    - List of plugins
+        - List for vim (has some old stuff): https://github.com/altermo/vim-plugin-list?tab=readme-ov-file
+        - More recent stuff: https://github.com/rockerBOO/awesome-neovim?tab=readme-ov-file
+    - Latex Tutorial (EJMastnak)
+
