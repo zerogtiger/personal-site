@@ -95,42 +95,42 @@ export default function ContactForm() {
         className='w-full'
       >
         <label className='-border flex flex-col mb-4'>
-          <span className='text-fg text-sm sm:text-l mb-4'>Message</span>
+          <span className='text-fg text-sm sm:text-base mb-4'>Message</span>
           <textarea
             rows={7}
             name='message'
             value={form.message}
             onChange={handleChange}
             placeholder="Message"
-            className='bg-bg1 py-4 px-6 text-sm sm:text placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
+            className='bg-bg1 py-4 px-6 text-sm sm:text-base placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
           />
         </label>
         <label className='flex flex-col mb-4'>
-          <span className='text-fg text-sm sm:text-l mb-4'>Your name</span>
+          <span className='text-fg text-sm sm:text-base mb-4'>Your name</span>
           <input
             type='text'
             name='name'
             value={form.name}
             onChange={handleChange}
             placeholder="Name"
-            className='bg-bg1 py-4 px-6 text-sm sm:text placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
+            className='bg-bg1 py-4 px-6 text-sm sm:text-base placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
           />
         </label>
         <label className='flex flex-col mb-6'>
-          <span className='text-fg text-sm sm:text-l mb-4'>Email address</span>
+          <span className='text-fg text-sm sm:text-base mb-4'>Email address</span>
           <input
             type='email'
             name='email'
             value={form.email}
             onChange={handleChange}
             placeholder="address@email.com"
-            className='bg-bg1 py-4 px-6 text-sm sm:text placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
+            className='bg-bg1 py-4 px-6 text-sm sm:text-base placeholder:text-gray text-fg rounded-[0.5rem] outline-none border-none'
           />
         </label>
         <div className="sm:flex">
           <button
             type='submit'
-            className='bg-bg2 border-2 py-2 px-8 rounded-[0.5rem] text-sm sm:text  text-center border-fg w-fit text-green font-bold text-l hover:bg-fg hover:text-bg'
+            className='bg-bg2 border-2 py-2 px-8 rounded-[0.5rem] text-sm sm:text-base  text-center border-fg w-fit text-green font-bold text-base hover:bg-fg hover:text-bg'
           >
             {loading ? "Sending..." : "Send"}
           </button>
