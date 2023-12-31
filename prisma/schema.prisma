@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model cameras {
+  id     Int      @id @default(autoincrement())
+  make   String?  @db.VarChar(255)
+  model  String?  @db.VarChar(255)
+  photos photos[]
+}
+
+model lenses {
+  id     Int      @id @default(autoincrement())
+  make   String?  @db.VarChar(255)
+  model  String?  @db.VarChar(255)
+  photos photos[]
+}
+
+model locations {
+  id        Int      @id @default(autoincrement())
+  city      String?  @db.VarChar(255)
+  state     String?  @db.VarChar(255)
+  country   String?  @db.VarChar(255)
+  longitude Decimal? @db.Decimal(10, 1)
+  latitude  Decimal? @db.Decimal(10, 1)
+  photos    photos[]
+}
+
+model photos {
+  id            Int        @id @default(autoincrement())
+  file_location String?    @db.VarChar(255)
+  date          DateTime?  @db.Date
+  time          DateTime?  @db.Time(6)
+  aperature     Decimal?   @db.Decimal(10, 2)
+  shutter_speed String?    @db.VarChar(255)
+  iso           Int?
+  location_id   Int?
+  camera_id     Int?
+  lens_id       Int?
+  description   String?
+  cameras       cameras?   @relation(fields: [camera_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "camera_id")
+  lenses        lenses?    @relation(fields: [lens_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "lens_id")
+  locations     locations? @relation(fields: [location_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "location_id")
+}

@@ -25,13 +25,13 @@ and additionally, if you fall into any of the following categories, you will als
 
 ## Contents
 
-*Coming very soon*
-
-1. **Pre-requisites**
+1. [**Pre-requisites**](prereq)
 
     Recommended software requirements and knowledge before starting the series, with solutions or short tutorials to help you fulfill them. 
 
-1. **Installation**
+*Coming very soon*
+
+2. **Installation**
     
     Install the bare-bones Neovim editor.
 
@@ -115,7 +115,7 @@ If you ever find yourself stuck in a specific part of an article, take it as a g
 
 <details>
 <summary>Wait, this sounds so irresponsible</summary> 
-<br>
+
 As irresponsible as it sounds, this was what I did when I learned all content in this series on my own. It will expose you to more related knowledge, making you more knowledgable in this field and will help you get better at finding answers on the internet the next time you have a question, coding related or not. 
 
 Some tips when Googling: 

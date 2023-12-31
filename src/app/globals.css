@@ -54,7 +54,7 @@ body {
         --color-orange-rgb: 254 128 25;
     }
     main code {
-        @apply font-iosevka;
+        @apply font-iosevka bg-bg2;
     }
     main h1 {
         @apply text-fg font-bold text-4xl mt-12;
