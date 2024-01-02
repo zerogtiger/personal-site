@@ -4,18 +4,13 @@ import PhotoDetails from "@/components/PhotoDetails";
 import { PrismaClient } from "@prisma/client"
 import { useState, useEffect } from "react";
 import { GET } from "../api/route";
+import PhotoSearchBar from "@/components/PhotoSearchBar";
 
 // export const metadata = {
 //   title: 'Photography | zerogtiger'
 // }
 
 const prisma = new PrismaClient();
-
-// async function make_call() {
-//   const ret = await prisma.photos.count();
-//   console.log(ret);
-//   return ret;
-// }
 
 export default function Photography() {
   const [popupShown, setPopupShown] = useState(false);
@@ -38,191 +33,6 @@ export default function Photography() {
     }
   }
 
-  // all photos
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   }
-  // });
-
-  // order by location
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   },
-  //   orderBy: {
-  //     locations: {
-  //       city: "asc",
-  //     }
-  //   }
-  // });
-
-  // order by camera
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   },
-  //   orderBy: {
-  //     cameras: {
-  //       make: "asc",
-  //     }
-  //   }
-  // });
-
-  // order by date
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   },
-  //   orderBy: {
-  //     date: "asc",
-  //   }
-  // });
-
-  // filter by location, camera, lens, etc.
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   },
-  //   orderBy: {
-  //     date: "asc",
-  //   },
-  //   where: {
-  //     OR: [
-  //       { lens_id: 1 }, // iphone ultra wide
-  //       { lens_id: 2 }, // iphone main
-  //       { location_id: 1 }, // waterloo
-  //     ],
-  //   }
-  // });
-  //
-
-  // search (in all categories)
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   },
-  //   orderBy: {
-  //     date: "asc",
-  //   },
-  //   where: {
-  //     OR: [
-  //       { lens_id: 1 }, // iphone ultra wide
-  //       { lens_id: 2 }, // iphone main
-  //       { location_id: 1 }, // waterloo
-  //     ],
-  //   }
-  // });
-
-  // search
-  const user_input = "26mm";
-  const user_input_num = Number(user_input);
-  // const photos = await prisma.photos.findMany({
-  //   include: {
-  //     lenses: true,
-  //     cameras: true,
-  //     locations: true,
-  //   },
-  //   orderBy: {
-  //     date: "asc",
-  //   },
-  //   where: {
-  //     OR: [
-  //       {
-  //         lenses: {
-  //           make: { contains: user_input, mode: 'insensitive', },
-  //         }
-  //       },
-  //       {
-  //         lenses: {
-  //           model: { contains: user_input, mode: 'insensitive', },
-  //         },
-  //       },
-  //       {
-  //         cameras: {
-  //           make: { contains: user_input, mode: 'insensitive', },
-  //         }
-  //       },
-  //       {
-  //         cameras: {
-  //           model: { contains: user_input, mode: 'insensitive', },
-  //         },
-  //       },
-  //       {
-  //         locations: {
-  //           city: { contains: user_input, mode: 'insensitive', },
-  //         },
-  //       },
-  //       {
-  //         locations: {
-  //           state: { contains: user_input, mode: 'insensitive', },
-  //         },
-  //       },
-  //       {
-  //         locations: {
-  //           country: { contains: user_input, mode: 'insensitive', },
-  //         },
-  //       },
-  //       {
-  //         description: { contains: user_input, mode: 'insensitive', },
-  //       },
-  //       {
-  //         locations: {
-  //           longitude: {
-  //             gte: (Number.isNaN(user_input_num) ? -1000 : user_input_num - 5),
-  //             lte: (Number.isNaN(user_input_num) ? -1000 : user_input_num + 5),
-  //           },
-  //         },
-  //       },
-  //       {
-  //         locations: {
-  //           latitude: {
-  //             gte: (Number.isNaN(user_input_num) ? -1000 : user_input_num - 5),
-  //             lte: (Number.isNaN(user_input_num) ? -1000 : user_input_num + 5),
-  //           },
-  //         },
-  //       },
-  //       {
-  //         aperature: {
-  //           gte: (Number.isNaN(user_input_num) ? -1 : user_input_num - 0.5),
-  //           lte: (Number.isNaN(user_input_num) ? -1 : user_input_num + 0.5),
-  //         },
-  //       },
-  //       {
-  //         shutter_speed: {
-  //           contains: user_input,
-  //         },
-  //       },
-  //       {
-  //         iso: {
-  //           gte: (Number.isNaN(user_input_num) ? 0 : user_input_num - 500),
-  //           lte: (Number.isNaN(user_input_num) ? -500 : user_input_num + 500),
-  //         },
-  //       },
-  //     ],
-  //   }
-  // });
-  //
-  // await prisma.$disconnect()
-  //   .catch(async (e) => {
-  //     console.error(e)
-  //     await prisma.$disconnect()
-  //     process.exit(1)
-  //   })
-
-  // console.log("ret");
 
   useEffect(() => {
     GET({ photo_id: -1, mode: 1 }).then((data) => {
@@ -269,9 +79,14 @@ export default function Photography() {
   return (
     <main>
       <div className='-border mx-auto px-4 max-w-[52rem]'>
-        <div className="w-full">
-          <h1>Photography</h1>
-          <p>Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
+        <div className="mt-10 flex w-full">
+          <div className="border w-2/5">
+            <h1 className="mt-0">Photography</h1>
+            <p>Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
+          </div>
+          <div className="w-3/5">
+            <PhotoSearchBar />
+          </div>
         </div>
         <div className="-border-[1px] columns-2xs">
           {currentQuery.map((key, idx) => {
@@ -307,16 +122,16 @@ export default function Photography() {
           })}
         </div>
       </div>
-      {popupShown ? <div className="fixed inset-0 bg-black/50 w-full h-full"/> : ""}
-        <PhotoDetails
-          popupShown={popupShown}
-          setPopupShown={setPopupShown}
-          photoDisplayId={photoDisplayId}
-          setPhotoDisplayId={setPhotoDisplayId}
-          changeIndex={changeIndex}
-          photos={photos}
-        />
-      </main>
+      {popupShown ? <div className="fixed inset-0 bg-black/50 w-full h-full" /> : ""}
+      <PhotoDetails
+        popupShown={popupShown}
+        setPopupShown={setPopupShown}
+        photoDisplayId={photoDisplayId}
+        setPhotoDisplayId={setPhotoDisplayId}
+        changeIndex={changeIndex}
+        photos={photos}
+      />
+    </main>
     //   // )}
   );
 }
