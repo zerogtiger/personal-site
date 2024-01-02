@@ -42,6 +42,16 @@ export default function Content() {
             </p>
           </div>
         </section>
+        <section>
+          <h2>Photography</h2>
+          <div>
+            <p>
+              <Link href={'content/photography'} className="font-bold">Photography (beta)</Link>
+              <br />
+              Photos I've taken in my recent few years of pursuit in photography. 
+            </p>
+          </div>
+        </section>
       </div>
     </main >
   )
