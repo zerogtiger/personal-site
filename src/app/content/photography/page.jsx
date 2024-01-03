@@ -3,7 +3,6 @@ import PhotoCard from "@/components/PhotoCard";
 import PhotoDetails from "@/components/PhotoDetails";
 import { PrismaClient } from "@prisma/client"
 import { useState, useEffect } from "react";
-import { GET } from "../api/route";
 import PhotoSearchBar from "@/components/PhotoSearchBar";
 
 // export const metadata = {
@@ -35,20 +34,26 @@ export default function Photography() {
 
 
   useEffect(() => {
-    GET({ photo_id: -1, mode: 1 }).then((data) => {
-      const mp = new Map();
-      // console.log(`map: ${mp.size()}`);
-      // console.log(data);
-      const arr = [];
-      for (const photo_index in data) {
-        // console.log(data[photo_index]);
-        mp.set(data[photo_index].id, data[photo_index]);
-        arr.push(data[photo_index].id);
-      }
-      setPhotos(mp);
-      setCurrentQuery(arr);
-      setLoading(false);
-    })
+    const fetchData = async () => {
+      await fetch("/content/api?photo_id=-1&mode=1")
+        .then(response => response.json())
+        .then(ret => {
+          console.log(ret);
+          const data = ret.ret;
+          const mp = new Map();
+          const arr = [];
+          for (const photo_index in data) {
+            // console.log(data[photo_index]);
+            mp.set(data[photo_index].id, data[photo_index]);
+            arr.push(data[photo_index].id);
+          }
+          setPhotos(mp);
+          setCurrentQuery(arr);
+          setLoading(false);
+        })
+    };
+
+    fetchData();
   }, []);
 
   // useEffect(() => {

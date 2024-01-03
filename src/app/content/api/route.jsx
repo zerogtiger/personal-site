@@ -4,11 +4,22 @@ import { NextResponse } from "next/server";
 
 const prisma = new PrismaClient();
 
-export async function GET({
-  photo_id, // -1 if all photos
-  mode, // 1 if all info, 0 if id only
-}) {
+export async function GET(
+  request
+  // request
+  // photo_id, // -1 if all photos
+  // mode, // 1 if all info, 0 if id only
+) {
   try {
+    const { searchParams } = new URL(request.url);
+
+    const photo_id = Number(searchParams.get('photo_id'));
+    const mode = Number(searchParams.get('mode'));
+
+    // console.log(photo_id);
+    // console.log(mode);
+    // const photo_id = -1;
+    // const mode = 1;
 
     // all photos
     // const photos = await prisma.photos.findMany({
@@ -238,17 +249,23 @@ export async function GET({
       })
     }
 
+
+    // console.log(ret);
+    // console.log(`window type: ${typeof window === 'undefined'}`)
     await prisma.$disconnect()
       .catch(async (e) => {
         console.error(e)
         await prisma.$disconnect()
         process.exit(1)
       })
-
-    // console.log(ret);
-    console.log(`window type: ${typeof window === 'undefined'}`)
-    return ret;
+    return NextResponse.json({ret});
   } catch (error) {
+    await prisma.$disconnect()
+      .catch(async (e) => {
+        console.error(e)
+        await prisma.$disconnect()
+        process.exit(1)
+      })
     return NextResponse.json({ error: error }, { status: 500 });
   }
 }

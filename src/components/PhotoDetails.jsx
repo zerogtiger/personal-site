@@ -79,7 +79,7 @@ export default function PhotoDetails({
                 <br />
                 ({photoDetails.locations.latitude >= 0 ? `${photoDetails.locations.latitude}° N` : `${photoDetails.locations.latitude}° S`}, {photoDetails.locations.longitude >= 0 ? `${photoDetails.locations.longitude}° E` : `${photoDetails.locations.longitude}° W`})
                 <br />
-                <FontAwesomeIcon icon={faCalendar} /> {photoDetails.date.toDateString()} | {photoDetails.time.toLocaleTimeString()}
+                <FontAwesomeIcon icon={faCalendar} /> {(new Date(photoDetails.date)).toDateString()} | {(new Date(photoDetails.time)).toLocaleTimeString()}
                 <br />
                 <FontAwesomeIcon icon={faCamera} /> {photoDetails.cameras.make} {photoDetails.cameras.model}
               </div>
