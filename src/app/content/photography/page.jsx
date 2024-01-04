@@ -37,9 +37,7 @@ export default function Photography() {
     const fetchData = async () => {
       await fetch("/content/api?photo_id=-1&mode=1")
         .then(response => response.json())
-        .then(ret => {
-          console.log(ret);
-          const data = ret.ret;
+        .then(data => {
           const mp = new Map();
           const arr = [];
           for (const photo_index in data) {
