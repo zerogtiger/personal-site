@@ -1,8 +1,8 @@
 # Tiger Ding's Personal Site
 
-### Visit at [zerogtiger.vercel.app](https://zerogtiger.vercel.app/)
+### Visit at [zerotiger.ca](https://zerotiger.ca/)
 
 
-Built using NextJS and styled with Tailwind CSS.
+Built using NextJS and styled with Tailwind CSS with PostgreSQL backend and Prisma as ORM.
 
-Last updated 22/08/2023.
+Last updated 01/05/2024.
