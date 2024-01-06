@@ -52,9 +52,9 @@ export default function ContactForm() {
     }
     if (invalid)
       return;
-    console.log(validMessage);
-    console.log(validEmail);
-    console.log('email sent');
+    // console.log(validMessage);
+    // console.log(validEmail);
+    // console.log('email sent');
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,

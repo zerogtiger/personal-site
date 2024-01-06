@@ -10,6 +10,7 @@ export default function PhotoDetails({
   popupShown, setPopupShown,
   photoDisplayId,
   changeIndex,
+  inspectIndex,
   photos,
 }) {
 
@@ -55,13 +56,13 @@ export default function PhotoDetails({
 
   return (
     popupShown ?
-      <div className="text-black px-2 py-2 inset-0 rounded-2xl fixed -border-fg bg-white m-auto flex w-[93%] h-[90%] -border-2 justify-center items-center" ref={popup}>
+      <div className="text-black px-2 py-2 inset-0 rounded-2xl fixed -border-fg bg-white m-auto flex w-[93%] h-[90%] -border-2 justify-center items-center z-50" ref={popup}>
         <div className="-border absolute top-2 right-4 text-[#C0C0C0] text-3xl " >
           <FontAwesomeIcon className="-border cursor-pointer" icon={faTimes} onClick={() => setPopupShown(false)} />
         </div>
         <div className="-border-2 flex justify-center items-center h-full w-[8%] ">
           <p className="-border-2 text-[#C0C0C0] text-4xl ">
-            <FontAwesomeIcon onClick={() => changeIndex(-1)} className="cursor-pointer" icon={faChevronLeft} />
+            {inspectIndex(-1) ? <FontAwesomeIcon onClick={() => changeIndex(-1)} className="cursor-pointer" icon={faChevronLeft} /> : ""}
           </p>
         </div>
         <div className="h-full pb-3 w-[95%]">
@@ -75,13 +76,25 @@ export default function PhotoDetails({
             <h1 className="text-black mt-0 mb-2 h-1/3">{photoDetails.description}</h1>
             <div className="flex h-2/3">
               <div className="w-1/2 -border-2 text-sm">
-                <FontAwesomeIcon icon={faLocationDot} />  {photoDetails.locations.city}, {photoDetails.locations.state}, {photoDetails.locations.country}
-                <br />
-                ({photoDetails.locations.latitude >= 0 ? `${photoDetails.locations.latitude}° N` : `${photoDetails.locations.latitude}° S`}, {photoDetails.locations.longitude >= 0 ? `${photoDetails.locations.longitude}° E` : `${photoDetails.locations.longitude}° W`})
-                <br />
-                <FontAwesomeIcon icon={faCalendar} /> {(new Date(photoDetails.date)).toDateString()} | {(new Date(photoDetails.time)).toLocaleTimeString()}
-                <br />
-                <FontAwesomeIcon icon={faCamera} /> {photoDetails.cameras.make} {photoDetails.cameras.model}
+                <table className="text-left items-start">
+                  <tbody>
+                    <tr className="-border">
+                      <th className="-border w-6"><FontAwesomeIcon icon={faLocationDot} /></th>
+                      <th className="font-normal"> {photoDetails.locations.city}, {photoDetails.locations.state}, {photoDetails.locations.country}
+                        <br />
+                        ({photoDetails.locations.latitude >= 0 ? `${photoDetails.locations.latitude}° N` : `${photoDetails.locations.latitude}° S`}, {photoDetails.locations.longitude >= 0 ? `${photoDetails.locations.longitude}° E` : `${photoDetails.locations.longitude}° W`})
+                      </th>
+                    </tr>
+                    <tr>
+                      <th><FontAwesomeIcon icon={faCalendar} /> </th>
+                      <th className="font-normal"> {(new Date(photoDetails.date)).toDateString()} | {(new Date(photoDetails.time)).toLocaleTimeString()}</th>
+                    </tr>
+                    <tr>
+                      <th><FontAwesomeIcon icon={faCamera} /></th>
+                      <th className="font-normal"> {photoDetails.cameras.make} {photoDetails.cameras.model}</th>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <div className="text-sm w-1/2 -border-2 text-right">
                 {photoDetails.lenses.make} {photoDetails.lenses.model}
@@ -93,7 +106,7 @@ export default function PhotoDetails({
         </div>
         <div className="-border-2 flex justify-center items-center h-full w-[8%] ">
           <p className="-border-2 text-[#C0C0C0] text-4xl text-left">
-            <FontAwesomeIcon onClick={() => changeIndex(1)} className="cursor-pointer" icon={faChevronRight} />
+            {inspectIndex(1) ? <FontAwesomeIcon onClick={() => changeIndex(1)} className="cursor-pointer" icon={faChevronRight} /> : ""}
           </p>
         </div>
       </div>
@@ -101,3 +114,10 @@ export default function PhotoDetails({
       ""
   )
 }
+// <FontAwesomeIcon icon={faLocationDot} />  {photoDetails.locations.city}, {photoDetails.locations.state}, {photoDetails.locations.country}
+// <br />
+// ({photoDetails.locations.latitude >= 0 ? `${photoDetails.locations.latitude}° N` : `${photoDetails.locations.latitude}° S`}, {photoDetails.locations.longitude >= 0 ? `${photoDetails.locations.longitude}° E` : `${photoDetails.locations.longitude}° W`})
+// <br />
+// <FontAwesomeIcon icon={faCalendar} /> {(new Date(photoDetails.date)).toDateString()} | {(new Date(photoDetails.time)).toLocaleTimeString()}
+// <br />
+// <FontAwesomeIcon icon={faCamera} /> {photoDetails.cameras.make} {photoDetails.cameras.model}

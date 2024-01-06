@@ -168,6 +168,11 @@ body {
         left: 24px;
         opacity: 0;
     }
+    .filter-bar {
+        * {
+            font-size: 12px;
+        }
+    }
 
     nav * > *, nav *, footer * > *, footer * {
         transition: all 300ms ease-in-out;
