@@ -15,6 +15,16 @@ export default function Content() {
       <div className='-border mx-auto px-4 max-w-[52rem]'>
         <h1>Content </h1>
         <section>
+          <h2>Photography</h2>
+          <div>
+            <p>
+              <Link href={'content/photography'} className="font-bold">Portfolio</Link>
+              <br />
+              Photos I've taken in my recent few years of pursuit in photography. 
+            </p>
+          </div>
+        </section>
+        <section>
           <h2>Tutorials</h2>
           <div>
             <p>
@@ -39,16 +49,6 @@ export default function Content() {
               <Link href={'content/water_canyon_landscape/water_canyon_landscape'} className="font-bold">Photorealistic canyon water landscape</Link>
               <br />
               A photorealistic landscape created with procedural textures in Blender.
-            </p>
-          </div>
-        </section>
-        <section>
-          <h2>Photography</h2>
-          <div>
-            <p>
-              <Link href={'content/photography'} className="font-bold">Photography (beta)</Link>
-              <br />
-              Photos I've taken in my recent few years of pursuit in photography. 
             </p>
           </div>
         </section>
