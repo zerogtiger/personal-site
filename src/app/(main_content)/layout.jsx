@@ -1,5 +1,5 @@
 import NavBar from '@/components/NavBar'
-import './globals.css'
+import '@/app/globals.css'
 import FootNav from '@/components/FootNav'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -14,10 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='bg-bg'>
-        <NavBar />
+        <NavBar photography={false}/>
         {children}
         <Analytics />
-        <FootNav />
+        <FootNav photography={false}/>
       </body>
     </html >
   )

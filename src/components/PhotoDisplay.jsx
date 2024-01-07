@@ -143,8 +143,8 @@ export default function PhotoDisplay() {
       <div className='-border mx-auto px-4 max-w-[52rem]'>
         <div className="mt-10 flex w-full justify-center">
           <div className="-border w-2/5">
-            <h1 className="mt-0">Photography</h1>
-            <p>Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
+            <h1 className="mt-0 text-black">Photography</h1>
+            <p className="text-black">Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
           </div>
           <div className="-border w-3/5 items-center justify-center flex">
             <PhotoSearchBar
@@ -159,7 +159,7 @@ export default function PhotoDisplay() {
             />
           </div>
         </div>
-        <div className="w-full"><p className="font-semibold">Loading...</p></div>
+        <div className="w-full"><p className="font-semibold text-black">Loading...</p></div>
       </div>
     </main>
   );
@@ -170,8 +170,8 @@ export default function PhotoDisplay() {
       <div className='-border mx-auto px-4 max-w-[52rem]'>
         <div className="mt-10 flex w-full justify-center">
           <div className="-border w-2/5">
-            <h1 className="mt-0">Photography</h1>
-            <p>Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
+            <h1 className="mt-0 text-black">Photography</h1>
+            <p className="text-black">Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
           </div>
           <div className="-border w-3/5 items-center justify-center flex">
             <PhotoSearchBar
@@ -187,7 +187,7 @@ export default function PhotoDisplay() {
           </div>
         </div>
         <div className="-border-[1px] columns-2xs">
-          {currentQuery.length === 0 ? <div className="w-full"><p className="font-semibold">No results. Maybe try some other terms?</p></div> : currentQuery.map((key, idx) => {
+          {currentQuery.length === 0 ? <div className="w-full"><p className="text-black font-semibold">No results. Maybe try some other terms?</p></div> : currentQuery.map((key, idx) => {
             // console.log(photos + " | " + key);
             const photo = photos.get(key);
             return (
