@@ -1,6 +1,7 @@
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import Image from "next/image";
 
 
 export default function PhotoCard({
@@ -36,7 +37,7 @@ export default function PhotoCard({
         setDisplayIndex(index);
         setDisplayId(id)
       }}>
-      <img className="mt-0 mb-4"
+      <Image className="mt-0 mb-4" width={300} height={300}
         src={file_location}
       />
       <p className="photocard-preview-location text-sm"><FontAwesomeIcon icon={faLocationDot} /> {city}, {state}</p>
