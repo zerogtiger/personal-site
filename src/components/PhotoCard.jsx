@@ -37,7 +37,7 @@ export default function PhotoCard({
         setDisplayIndex(index);
         setDisplayId(id)
       }}>
-      <Image className="mt-0 mb-4" width={300} height={300}
+      <Image className="mt-0 mb-4" width={200} height={200}
         src={file_location}
       />
       <p className="photocard-preview-location text-sm"><FontAwesomeIcon icon={faLocationDot} /> {city}, {state}</p>

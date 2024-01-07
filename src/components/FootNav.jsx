@@ -48,7 +48,7 @@ export default function FootNav() {
         </div >
       </div >
       <div className="mt-4 text-right text-bg2 px-2 text-[6px] sm:text-xs">
-        &copy; 2023 Tiger Ding. Some rights reserved.
+        &copy; 2024 Tiger Ding. Some rights reserved.
       </div >
     </footer >
   )
