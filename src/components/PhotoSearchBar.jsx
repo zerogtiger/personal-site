@@ -63,7 +63,7 @@ export default function PhotoSearchBar({
   }, [filterExpanded]);
 
 
-  let one = "flex-shrink-0 w-fit mx-1 my-1 px-4 py-[2px] justify-center items-center flex bg-[#E6E6E6] rounded-full border-[1px] border-[#666666] z-0 cursor-pointer"
+  let one = "flex-shrink-0 w-fit mx-1 my-1 px-4 py-[2px] justify-center items-center flex rounded-full border-[1px] z-0 cursor-pointer"
 
   return (
     <div className="w-full -border filter-bar ml-4 -border">
@@ -93,7 +93,7 @@ export default function PhotoSearchBar({
 
             {filterSelected.map(value => {
               return (
-                <div className={one}
+                <div className={`${one} bg-[#E6E6E6] border-[#666666]`}
                   onClick={() => filterExpanded ? invertSelectionState(value) : setFilterExpanded(true)}>
                   <p className="my-0 py-0 text-black font-semibold">{value}</p>
                 </div>)
@@ -109,7 +109,7 @@ export default function PhotoSearchBar({
                 return (
 
                   <div
-                    className={filterSelected.includes(value) ? `${one} bg-[#BBBBBB] border-[#666666]` : one}
+                    className={filterSelected.includes(value) ? `${one} bg-[#BBBBBB] border-[#666666]` : `${one} bg-[#E6E6E6] border-[#666666]`}
                     onClick={() => invertSelectionState(value)}>
                     <p className="my-0 py-0 text-black font-semibold">{value}</p>
                   </div>)
@@ -127,7 +127,7 @@ export default function PhotoSearchBar({
             <FontAwesomeIcon icon={faBars} className="text-black text-lg my-auto ml-3 mr-1" />
 
             {listSelected === "" ? "" :
-              <div className={one}
+              <div className={`${one} bg-[#E6E6E6] border-[#666666]`}
                 onClick={() => listExpanded ? setListSelected("") : setListExpanded(true)}>
                 <p className="my-0 py-0 text-black font-semibold">{listSelected}</p>
               </div>
@@ -140,7 +140,7 @@ export default function PhotoSearchBar({
 
               {listAvailable.map(value => {
                 return (
-                  <div className={value === listSelected ? `${one} bg-[#BBBBBB] border-[#666666]` : one}
+                  <div className={value === listSelected ? `${one} bg-[#BBBBBB] border-[#666666]` : `${one} bg-[#E6E6E6] border-[#666666]`}
                     onClick={() => listSelected===value? setListSelected("") : setListSelected(value)}>
                     <p className="my-0 py-0 text-black font-semibold">{value}</p>
                   </div>)
