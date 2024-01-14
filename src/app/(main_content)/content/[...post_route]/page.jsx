@@ -52,7 +52,10 @@ export async function generateMetadata({ params }) {
   return {
     title: `${matterResult.data.title} | zerogtiger`,
     twitter: {
-      images: [`${img_src}`],
+      images: {
+        url: img_src,
+        alt: 'Neovim setup',
+      },
     },
   }
 }
