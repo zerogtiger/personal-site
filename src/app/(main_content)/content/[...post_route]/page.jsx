@@ -53,7 +53,7 @@ export async function generateMetadata({ params }) {
     title: `${matterResult.data.title} | zerogtiger`,
     twitter: {
       images: {
-        url: img_src,
+        url: `https://raw.githubusercontent.com/zerogtiger/personal-site/main/public/_posts/${img_src}`,
         alt: 'Neovim setup',
       },
     },
