@@ -1,3 +1,7 @@
+---
+title: Code as fast as thought
+twitter_image: assets/intro/setup.png
+---
 # Code as fast as thought: a beginner's guide to building a tailored editor with Neovim
 
 This tutorial series aims to guide you in building an **efficient, tailored** editor based on Neovim to help you increase coding efficiency.
@@ -29,13 +33,13 @@ and additionally, if you fall into any of the following categories, you will als
 
     Recommended software requirements and knowledge before starting the series, with solutions or short tutorials to help you fulfill them. 
 
-*Coming very soon*
-
-2. **Installation**
+2. [**Installation**](install)
     
     Install the bare-bones Neovim editor.
 
-1. **(Neo)Vim Basics**
+*Coming very soon*
+
+3. **(Neo)Vim Basics**
 
     Learn the terms and notation of (Neo)Vim, navigating the editor, modes, Vim motions, and commands. 
 
@@ -104,10 +108,9 @@ Consider giving the repo a star if it helps you.
 ## Configuration
 
 Here is a brief overview of the setup used in this series:
-- Terminal: **Alacritty**
-- Colorscheme: **Gruvbox**
-- OS: **MacOS**
-
+- Terminal: [**Alacritty**](https://github.com/alacritty/alacritty)
+- Colorscheme: [**Gruvbox**](https://github.com/morhetz/gruvbox)
+- OS: [**macOS**](https://en.wikipedia.org/wiki/MacOS)
 
 ## Finding help
 

@@ -1,3 +1,7 @@
+---
+title: Pre-requisites
+twitter_image: assets/intro/setup.png
+---
 # Pre-requisites
 
 ## Goal of this article
@@ -35,6 +39,25 @@ If you are using Windows but would still like to follow a guide with a UNIX oper
     To disable GUI, you may run the command `sudo systemctl set-default multi-user.target`. To re-enable it, run `sudo systemctl set-default graphical.target`. To learn how commands work, see [Command line usage]().
     </details>
 
+## The `$PATH` variable
+
+**Prerequisite:** you know what is the `$PATH` variable and how to add directories to your `$PATH` variable. 
+
+<details>
+<summary>Suggestions</summary>
+
+**What it is**
+
+PATH is an environment variable on operating systems specifying a set of directories where executable programs are located. When you enter a command line command, the operating system searches for the according executable from the list of directories in `$PATH` and executes the command if the executable is found, and returns an error otherwise. 
+
+**How to add directories to `$PATH`** 
+
+On macOS, edit the `.zshrc` file found in your home directory and add `export PATH="<path-to-directory>:$PATH"`, save the file, then restart your terminal. 
+
+On Linux, edit the `.bashrc` file found in your home directory and add `export PATH="<path-to-directory>:$PATH"`, save the file, then restart the terminal. 
+
+For Windows users, follows [this guide](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+</details>
 
 ## Package installation
 
@@ -114,26 +137,21 @@ Here are the basic set of command line commands which are required for this seri
     For instance, if I wished to learn more about the `rm` command, I would enter `man rm`. 
     </details>
 
-## The `$PATH` variable
+## Difference between "update" and "upgrade" in the software realm
 
-**Prerequisite:** you know what is the `$PATH` variable and how to add directories to your `$PATH` variable. 
+<details> 
+<summary>There's a difference between update and upgrade?</summary>
 
-<details>
-<summary>Suggestions</summary>
+Although almost always used interchangeably, "update" and "upgrade" have distinct, though similar meanings in the software realm. 
 
-**What it is**
+Both refer to downloading and replacing a older version of a particular piece of software with a newer version. 
 
-PATH is an environment variable on operating systems specifying a set of directories where executable programs are located. When you enter a command line command, the operating system searches for the according executable from the list of directories in `$PATH` and executes the command if the executable is found, and returns an error otherwise. 
+However, update only "enhances" software, meaning they don't provide new features and only fixes problems instead.
 
-**How to add directories to `$PATH`** 
+Upgrade, on the otherhand, often brings new features and other significant changes. 
 
-On macOS, edit the `.zshrc` file found in your home directory and add `export PATH="<path-to-directory>:$PATH"`, save the file, then restart your terminal. 
-
-On Linux, edit the `.bashrc` file found in your home directory and add `export PATH="<path-to-directory>:$PATH"`, save the file, then restart the terminal. 
-
-For Windows users, follows [this guide](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+As an analogy, consider an old, framed painting. An update would be equivalent to replacing the paint-stripping wood with new ones, whereas an upgrade would be equivalent to replacing the current painting with the original Mona Lisa. 
 </details>
-
 
 <!-- - Pre-requisites -->
 <!--     - Goal of article -->

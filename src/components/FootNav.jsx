@@ -55,7 +55,7 @@ export default function FootNav(
               <p className={`font-bold 
                 ${photography? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Contact</p>
               <p className={`hidden sm:inline-block 
-                ${photography? "text-[#666666] group-hover:text-black" : "text[text-bg4 group-hover:text-fg"}`}>{aboutPreview}</p>
+                ${photography? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{aboutPreview}</p>
             </div>
           </Link>
           <Link href={"/about"}>

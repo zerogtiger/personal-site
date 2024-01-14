@@ -45,7 +45,8 @@ export default function NavBar(
           <div className={`h-6 sm:h-10 w-[2px] ${photography ? "bg-[#B3B3B3]" : "bg-orange"} mx-2 sm:mx-4`}>
           </div>
         </div>
-        <div className={`${photography ? "border-[#999999]" : "border-bg4" } border border-1 sm:border-0 rounded-[0.5rem] grid grid-cols-4 grid-flow-row text-xs sm:text-[16px] w-full sm:w-3/4 h-8 sm:h-12 gap-2`}>
+        <div className={`${photography ? "border-[#999999]" : "border-bg4"}
+          border border-1 sm:border-0 rounded-[0.5rem] grid grid-cols-4 grid-flow-row text-xs sm:text-[16px] w-full sm:w-3/4 h-8 sm:h-12 gap-2`}>
           <div className="group">
             <Link
               href={"/"}

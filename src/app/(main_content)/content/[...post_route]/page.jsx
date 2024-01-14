@@ -10,6 +10,7 @@ import rehypeRaw from 'rehype-raw';
 
 import Image from 'next/image';
 import imageSize from 'image-size';
+import Link from 'next/link';
 
 const path = require("path");
 
@@ -41,14 +42,18 @@ export function generateStaticParams() {
   return files;
 }
 
-
 export async function generateMetadata({ params }) {
 
-  const { post_route } = params
+  const { post_route } = params;
   const fileContents = fs.readFileSync(`public/_posts/${post_route.join('/')}.md`, 'utf8');
   const matterResult = matter(fileContents);
+  const img_src = (post_route.slice(0, -1).join('/') + (post_route.length === 1 ? '' : '/') + matterResult.data.twitter_image).trim().toString();
+  // console.log(`twitter image route: https://raw.githubusercontent.com/zerogtiger/personal-site/main/public/_posts/${img_src}`)
   return {
-    title: `${matterResult.data.title} | zerogtiger`
+    title: `${matterResult.data.title} | zerogtiger`,
+    twitter: {
+      images: [`${img_src}`],
+    },
   }
 }
 
@@ -59,6 +64,7 @@ export default async function Post({ params }) {
   const fileContents = fs.readFileSync(`public/_posts/${post_route.join('/')}.md`, 'utf8');
   const matterResult = matter(fileContents);
 
+  // <meta property="twitter:image" content="" />
   return (
     <main>
       <div className="-border mx-auto px-4 max-w-[52rem]">
@@ -68,6 +74,9 @@ export default async function Post({ params }) {
               const img_src = (post_route.slice(0, -1).join('/') + (post_route.length === 1 ? '' : '/') + props.src).trim().toString();
               const img_dim = imageSize('public/_posts/' + img_src);
               return <Image src={'/_posts/' + img_src} alt={props.alt} width={img_dim.width} height={img_dim.height} />
+            },
+            a(props) {
+              return <Link target='_blank' href={props.href}>{props.children}</Link>;
             },
             code({ node, inline, className, children, ...props }) {
               return !inline ? (

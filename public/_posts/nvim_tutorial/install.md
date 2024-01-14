@@ -1,4 +1,9 @@
-# Pre-requisites
+---
+title: Installation
+twitter_image: assets/intro/setup.png
+---
+
+# Installation
 
 ## Goal of this article
 
@@ -8,34 +13,34 @@ This articles covers the steps to install the Neovim, which will serve as the ba
 
 ### macOS
 
-If you're on macOS, simply run `brew install neovim`, which will download all necessary files and add the neovim executable to your `$PATH` variable. 
+If you're on macOS, simply run `brew install neovim`, which will download all necessary files and add the neovim executable to your `$PATH` variable. (If you don't have Homebrew installed, see the "Prerequisites" section of this guide).
+
+Restart your shell, then type `nvim --version` in the command line and press `enter`. If you see a message starting with `NVIM vX.X.X`, you're good to proceed to the next section. Otherwise, restart your computer and try the command again. 
 
 To update Neovim, run `brew update`, which will update Neovim, Homebrew, and all other packages installed with Homebrew. 
 
-To upgrade Neovim, run `brew upgrade Neovim`, which will update Neovim to the newest stable release version on your machine. 
+To upgrade Neovim, run `brew upgrade Neovim`, which will upgrade Neovim to the newest stable release version on your machine. 
 
 ### Linux
 
+If you want a quick and easy installation, consider using your distribution's package manager to install Neovim. For instance, on Ubuntu, you would run `sudo apt install neovim` in your command-line.
 
+However, these distributions are often multiple major versions behind the most recent release and may lack support for certain plugins, as most plugins strive to utilize newest features in the editor. Therefore, if you wish for the newest version, consider visiting the [Neovim repository on GitHub](https://github.com/neovim/neovim), navigating to the latest stable release by clicking on "Releases" on the right menu bar, then follow the instructions for installations on your Linux platform.
 
-<details> 
-<summary>There's a difference between update and upgrade?</summary>
+After installation, restart your shell, then type `nvim --version` in the command line and press `enter`. If you see a message starting with `NVIM vX.X.X`, you're good to proceed to the next section. Otherwise, restart your computer and try the command again. 
 
-Although almost always used interchangeably, "update" and "upgrade" have distinct, though similar meanings in the software realm. 
+### Windows
 
-Both refer to downloading and replacing a older version of a particular piece of software with a newer version. 
+Go to the official [Neovim repository on GitHub](https://github.com/neovim/neovim), navigate to "Releases" on the right menu bar and click on the latest stable release, then download the `nvim-win64.zip` compressed archive under "Assets" found at the very bottom of the page. 
 
-However, update only "enhances" software, meaning they don't provide new features and only fixes problems instead.
+Once the file has been downloaded to your local drive, extract its contents, then move it to a directory where you keep other development tools. Take note of its absolute file path (ex. `C:\Users\TigerDing\tools\nvim-win64\`). If you navigate to this directory, you will note that there is a subdirectory called `\bin\` (full path would be `C:\Users\TigerDing\tools\nvim-win64\bin\`). Take note of this path. 
 
-Upgrade, on the otherhand, often brings new features and other significant changes. 
+Add this path to your `$PATH` variable (as described in the pre-requisite section of this tutorial). 
 
-As an analogy, consider an old, framed painting. An update would be equivalent to replacing the paint-stripping wood with new ones, whereas an upgrade would be equivalent to replacing the current painting with the original Mona Lisa. 
-</details>
+Restart your shell, then type `nvim --version` in the command line and press `enter`. If you see a message starting with `NVIM vX.X.X`, you're good to proceed to the next section. Otherwise, restart your computer and try again. 
 
-
-
-- Installation
-    - Goal of article
-    - OS based
-    - Build from source
+<!-- - Installation -->
+<!--     - Goal of article -->
+<!--     - OS based -->
+<!--     - Build from source -->
 
