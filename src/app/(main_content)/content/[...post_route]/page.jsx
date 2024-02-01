@@ -69,6 +69,7 @@ export default async function Post({ params }) {
   const matterResult = matter(fileContents);
 
   // <meta property="twitter:image" content="" />
+  // return <Image src={'/_posts/' + img_src} alt={props.alt} width={img_dim.width} height={img_dim.height} />
   return (
     <main>
       <div className="-border mx-auto px-4 max-w-[52rem]">
@@ -77,7 +78,7 @@ export default async function Post({ params }) {
             img: (props) => {
               const img_src = (post_route.slice(0, -1).join('/') + (post_route.length === 1 ? '' : '/') + props.src).trim().toString();
               const img_dim = imageSize('public/_posts/' + img_src);
-              return <Image src={'/_posts/' + img_src} alt={props.alt} width={img_dim.width} height={img_dim.height} />
+              return <img src={'/_posts/' + img_src} alt={props.alt} width={img_dim.width} height={img_dim.height} />
             },
             a(props) {
               return <Link target='_blank' href={props.href}>{props.children}</Link>;

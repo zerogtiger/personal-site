@@ -11,7 +11,7 @@ export async function GET(
   // mode, // 1 if all info, 0 if id only
 ) {
   try {
-    const { searchParams } = new URL(request.url);
+    const { searchParams } = new URL(request.url); // dereferencing
 
     // /api?query=1&searchterm=&orderby=date&filterkey=lens_id&filterkey=lens_id&filterkey=location_id&filtervalue=1&filtervalue=2&filtervalue=1
 

@@ -84,8 +84,8 @@ export default function PhotoDisplay() {
     const fetchData = async () => {
       await fetch("/content/api?allphotos=1")
         .then(response => response.json())
-        .then(ret => {
-          const data = ret.ret;
+        .then(result => {
+          const data = result.ret;
 
           // Photos map, query
           const mp = new Map();
