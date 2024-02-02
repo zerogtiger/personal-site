@@ -68,7 +68,7 @@ Each article of the guide will consist of two parts
 1. Theory: knowledge about what will be done and how it works
 1. Hands-on: apply the theory, actually getting your hands dirty, and get closer to final goal
 
-Occationally, parts in an article may contain one or both of the following
+Occasionally, parts in an article may contain one or both of the following
 1. Mini tutorial to get you up to speed
 1. An external source if you want to go more in depth and learn more than the necessary for this series
 
