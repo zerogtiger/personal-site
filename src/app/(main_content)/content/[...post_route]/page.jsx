@@ -77,8 +77,13 @@ export default async function Post({ params }) {
           components={{
             img: (props) => {
               const img_src = (post_route.slice(0, -1).join('/') + (post_route.length === 1 ? '' : '/') + props.src).trim().toString();
-              const img_dim = imageSize('public/_posts/' + img_src);
-              return <img src={'/_posts/' + img_src} alt={props.alt} width={img_dim.width} height={img_dim.height} />
+              const img_dim = imageSize(`public/_posts/${img_src}`);
+              return <img src={`/_posts/${img_src}`} alt={props.alt} width={img_dim.width} height={img_dim.height} />
+            },
+            video: (props) => {
+              const video_src = (post_route.slice(0, -1).join('/') + (post_route.length === 1 ? '' : '/') + props.node.children[1].properties.src).trim().toString();
+              console.log(props);
+              return <video autoPlay={props.autoPlay} muted={props.muted} controls={props.controls} loop={props.loop}> <source src={`/_posts/${video_src}`}/> </video>
             },
             a(props) {
               return <Link target='_blank' href={props.href}>{props.children}</Link>;

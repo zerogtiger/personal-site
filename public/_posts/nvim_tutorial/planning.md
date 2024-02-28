@@ -1,5 +1,6 @@
 # Code as fast as thought: a beginner's guide to building a tailored editor with Neovim
 
+
 Sections:
 - Intro
     - Goal of this series
