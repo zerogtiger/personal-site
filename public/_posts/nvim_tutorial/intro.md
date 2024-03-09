@@ -193,6 +193,10 @@ Here are some questions I know people will ask
     - **Buggy**. It would randomly generate strange errors that gave literally zero information on the root cause. What follows is one of two things: either hours of Googling or constantly closing and re-opening the editor hoping it would magically go away. 
     - **Little focus on coding**. There are so many useless graphical elements that take attention away from what the software is meant to do: writing code.
 
+1. Q: Why not Microsoft Word?
+
+    A: dunno
+
 <!-- - Intro -->
 <!--     - Goal of this series -->
 <!--     - How these articles will work (tutorials to get started, link to external source that has more in depth view) -->
