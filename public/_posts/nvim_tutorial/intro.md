@@ -176,7 +176,7 @@ If you are not interested in why Neovim was selected to serve as the basis of ou
 
 **Remark:** do not worry if you find unfamilar terms in the discussion below. They will be explained in later articles of this article. 
 
-A little about Neovim: it is a modernized **fork** of the UNIX editor Vim. It has better support for modern features like LSPs (language server protocol, don't worry if you don't know what it is), faster parsing engine, and more. 
+A little about Neovim: it is a modernized **fork** of the UNIX editor Vim. It has better support for modern features like LSPs (language server protocol), faster parsing engine, and more. 
 
 Here are some questions I know people will ask
 1. Q: Why Neovim and not Vim or Helix?
