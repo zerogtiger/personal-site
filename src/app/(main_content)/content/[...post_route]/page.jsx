@@ -82,7 +82,7 @@ export default async function Post({ params }) {
             },
             video: (props) => {
               const video_src = (post_route.slice(0, -1).join('/') + (post_route.length === 1 ? '' : '/') + props.node.children[1].properties.src).trim().toString();
-              console.log(props);
+              // console.log(props);
               return <video autoPlay={props.autoPlay} muted={props.muted} controls={props.controls} loop={props.loop}> <source src={`/_posts/${video_src}`}/> </video>
             },
             a(props) {

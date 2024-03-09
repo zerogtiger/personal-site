@@ -96,7 +96,7 @@ body {
         @apply py-2 px-4 my-5 border-2 rounded-[0.5rem] border-gray bg-bg1 text-fg;
     }
     main details summary {
-        @apply font-bold;
+        @apply font-bold cursor-pointer;
     }
     main sub {
         @apply text-fg;
