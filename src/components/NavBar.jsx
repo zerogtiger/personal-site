@@ -37,7 +37,7 @@ export default function NavBar(
             href={'/'}
             className={`-border ${photography ? "border-[#999999]" : "border-bg4"} group ${photography ? "group-hover:border-[#666666]" : "group-hover:border-orange"} w-fit pl-2 flex items-center gap-4 h-7 sm:h-12`}
           >
-            <img src='/logo.png' alt='logo' className='h-7 w-7 sm:w-12 sm:h-12 object-contain' />
+            <img src={photography ? '/logo_dark.png' : '/logo.png'} alt='logo' className='h-7 w-7 sm:w-12 sm:h-12 object-contain' />
             <p className={`-border hidden sm:inline ${photography ? "text-[#808080] group-hover:text-[#4D4D4D]" : "text-gray group-hover:text-green"} text-[22px] font-bold`}>
               zerogtiger
             </p>
@@ -116,7 +116,7 @@ export default function NavBar(
         </div>
       </div>
       <img src='/theme_toggler.svg' alt='theme toggler'
-        className={`border-[1px] rounded-[0.5rem] ${photography ? "border-[#999999]" : "border-bg4"
+        className={`${photography ? 'hidden' : 'block'} border-[1px] rounded-[0.5rem] ${photography ? "border-[#999999]" : "border-bg4"
           } ${photography ? "hover:border-[#000000]" : "hover:border-orange"
           } p-2 w-10 h-10 object-contain cursor-pointer`} onClick={() => setTheme((theme + 1) % 2)} />
     </nav>

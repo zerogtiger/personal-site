@@ -7,7 +7,9 @@ twitter_image: assets/intro/setup.png
 
 ## Goal of this article
 
-This article will be split into two parts, separately introducing vim keybindings (aka. how to navigate and use the editor); followed by Neovim's editor's built-in features.
+This article will introduce vim keybindings (aka. how to navigate and use the editor).
+
+If you would like something that's longer, but more interactive, consider typing `:Tutor<ENTER>` after entering Neovim from the steps below.
 
 ## Conventions for describing keybinds
 
@@ -19,7 +21,9 @@ Sometimes, a functional key should be pressed. Any key in `< >` brackets will re
 
 To enter the editor, type `nvim` (or `nvim <FILE NAME>` if you wish to start editing a certain file). 
 
-Unlike conventional editors, all editing could (and should) be done via the keyboard only. This is, of course, in pure pursuit of editing efficiency (as moving your hands from the home row of keys take time).
+Unlike conventional editors, all editing could (and should) be done via the keyboard only. This is, of course, in pure pursuit of editing efficiency (as moving your hands from the home row of keys take time). 
+
+However, the goal of a computer is to serve the user and the user shouldn't be limited on how they "should" interact with the computer. Thus, I recommend first restricting yourself to navigating with efficient keybinds, then interacting with the editor however you want after you are familar with them.
 
 If you started the editor with `nvim` without a file name, copy the following dummy text into your editor by first selecting all the text, then enter your terminal and press `i`, followed by `<CTRL>v` (or `<CMD>v` on macOS), followed by `<ESC>`. Your editor should now contain the dummy text.
 
@@ -248,6 +252,17 @@ This serves as the basic set of movements. You may notice your cursor can only m
 To remember these, `h` and `l` are the leftmost and rightmost of keys, corresponding to left and right cursor movement. 
 
 As for `j` and `k`, note that `j` reaches downwards and thus moves the cursor downwards, whereas `k` reaches upwards, and thus moves the cursor upwards. 
+
+Play around with these 4 keys and try to navigate to the `)` character in `struct Node *add(struct Node *n1lst, struct Node *n2lst)` (you may need to scroll down to see this function.
+
+#### Horizontal movements
+
+This section will detail moving along the same line.
+
+
+
+
+
 
 
 

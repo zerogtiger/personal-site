@@ -141,12 +141,12 @@ export default function PhotoDisplay() {
   if (isLoading) return (
     <main>
       <div className='-border mx-auto px-4 max-w-[52rem]'>
-        <div className="mt-10 flex w-full justify-center">
-          <div className="-border w-2/5">
+        <div className="mt-10 sm:flex w-full justify-center">
+          <div className="-border sm:w-2/5">
             <h1 className="mt-0 text-black">Photography</h1>
             <p className="text-black">Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
           </div>
-          <div className="-border w-3/5 items-center justify-center flex">
+          <div className="-border sm:w-3/5 items-center justify-center flex">
             <PhotoSearchBar
               filterExpanded={filterExpanded} setFilterExpanded={setFilterExpanded}
               filterSelected={filterSelected} setFilterSelected={setFilterSelected}
@@ -168,12 +168,12 @@ export default function PhotoDisplay() {
   return (
     <main>
       <div className='-border mx-auto px-4 max-w-[52rem]'>
-        <div className="mt-10 flex w-full justify-center">
-          <div className="-border w-2/5">
+        <div className="mt-10 sm:flex w-full justify-center">
+          <div className="-border sm:w-2/5">
             <h1 className="mt-0 text-black">Photography</h1>
             <p className="text-black">Following these lines are the photos I've taken in my recent few years of pursuit in photography. </p>
           </div>
-          <div className="-border w-3/5 items-center justify-center flex">
+          <div className="-border sm:w-3/5 items-center justify-center flex">
             <PhotoSearchBar
               filterExpanded={filterExpanded} setFilterExpanded={setFilterExpanded}
               filterSelected={filterSelected} setFilterSelected={setFilterSelected}

@@ -63,16 +63,19 @@ export default function PhotoSearchBar({
   }, [filterExpanded]);
 
 
+  // tag outside the bar
   let one = "flex-shrink-0 w-fit mx-1 my-1 px-4 py-[2px] justify-center items-center flex rounded-full border-[1px] z-0 cursor-pointer"
+  // tag in the bar
+  let two = "flex-shrink-0 mx-1 my-1 px-4 py-[2px] justify-center items-center flex rounded-full border-[1px] z-0 cursor-pointer"
 
   return (
-    <div className="w-full -border filter-bar ml-4 -border">
+    <div className="w-full -border filter-bar mb-4 sm:ml-4 -border">
       <div className="relative min-h-[40px] my-2 bg-[#E6E6E6] border-[#BCBCBC] flex rounded-xl flex-shrink-0 border items-center">
         <FontAwesomeIcon icon={faMagnifyingGlass} className="text-black text-lg my-auto mx-3" />
         <input
           name='message'
           placeholder="Search by title, date, ... anything"
-          className='h-fit w-full bg-inherit text-sm sm:text-[12pt] placeholder:text-gray placeholder:text-[12pt] text-black align-middle outline-none border-none'
+          className='h-fit w-full bg-inherit text-sm sm:text-[12pt] placeholder:text-gray placeholder:text-sm sm:placeholder:text-[12pt] text-black align-middle outline-none border-none'
           onChange={handleChange}
         />
         <div
@@ -82,18 +85,21 @@ export default function PhotoSearchBar({
         </div>
       </div>
       <div className="grid grid-cols-3 grid-rows-1 -border gap-2">
-        <div className={`${filterExpanded? "bg-white" : "bg-[#E6E6E6]"} col-start-1 col-span-2 relative min-h-[40px] border-[#BCBCBC] rounded-xl h-full border z-50`}
+        <div className={`${filterExpanded ? "bg-white" : "bg-[#E6E6E6]"} col-start-1 col-span-2 relative min-h-[40px] border-[#BCBCBC] rounded-xl h-full border z-50`}
           ref={filterPopup}>
 
           <div className="flex w-full min-h-[40px] items-center max-h-[40px] overflow-x-hidden"
-            onClick={() => { if (!filterExpanded) { setFilterExpanded(true) }; }}
+            onClick={() => {
+              if (!filterExpanded) { setFilterExpanded(true) }
+              // else { setFilterExpanded(false) };
+            }}
           >
 
             <FontAwesomeIcon icon={faFilter} className="text-black text-lg my-auto ml-3 mr-1" />
 
             {filterSelected.map(value => {
               return (
-                <div className={`${one} bg-[#E6E6E6] border-[#666666]`}
+                <div className={`${two} bg-[#E6E6E6] border-[#666666]`}
                   onClick={() => filterExpanded ? invertSelectionState(value) : setFilterExpanded(true)}>
                   <p className="my-0 py-0 text-black font-semibold">{value}</p>
                 </div>)
@@ -119,11 +125,14 @@ export default function PhotoSearchBar({
             </div>}
 
         </div>
-        <div className={`${(listExpanded? "bg-white" : "bg-[#E6E6E6]")} col-span-1 relative min-h-[40px] border-[#BCBCBC] rounded-xl border`}
+        <div className={`${(listExpanded ? "bg-white" : "bg-[#E6E6E6]")} col-span-1 relative min-h-[40px] border-[#BCBCBC] rounded-xl border`}
           ref={listPopup}>
 
           <div className="w-full min-h-[40px] max-h-[40px] flex items-center overflow-x-hidden"
-    onClick={() => {if (!listExpanded) {setListExpanded(true);}}}>
+            onClick={() => {
+              if (!listExpanded) { setListExpanded(true); } 
+              // else { setListExpanded(false); } 
+            }}>
             <FontAwesomeIcon icon={faBars} className="text-black text-lg my-auto ml-3 mr-1" />
 
             {listSelected === "" ? "" :
@@ -141,7 +150,7 @@ export default function PhotoSearchBar({
               {listAvailable.map(value => {
                 return (
                   <div className={value === listSelected ? `${one} bg-[#BBBBBB] border-[#666666]` : `${one} bg-[#E6E6E6] border-[#666666]`}
-                    onClick={() => listSelected===value? setListSelected("") : setListSelected(value)}>
+                    onClick={() => listSelected === value ? setListSelected("") : setListSelected(value)}>
                     <p className="my-0 py-0 text-black font-semibold">{value}</p>
                   </div>)
               })}

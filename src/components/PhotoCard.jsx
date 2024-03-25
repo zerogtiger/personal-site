@@ -28,19 +28,17 @@ export default function PhotoCard({
   setDisplayIndex,
 }) {
 
-
-
   return (
-    <div className="-border-2 photocard_container"
+    <div className="-border photocard-container"
       onClick={() => {
         setPopupShown(true);
         setDisplayIndex(index);
         setDisplayId(id)
       }}>
-      <Image className="mt-0 mb-4" width={200} height={200}
+      <Image className="-border mb-1 mt-4 sm:mt-0 sm:mb-4" width={400} height={400}
         src={file_location}
       />
-      <p className="photocard-preview-location text-sm"><FontAwesomeIcon icon={faLocationDot} /> {city}, {state}</p>
+      <p className="-border hidden sm:block sm:photocard-preview-location sm:text-sm"><FontAwesomeIcon icon={faLocationDot} /> {city}, {state}</p>
     </div>
   )
 }

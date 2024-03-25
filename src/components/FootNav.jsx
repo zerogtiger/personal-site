@@ -18,7 +18,7 @@ export default function FootNav(
             href={'/'}
             className='group w-fit gap-2 space-y-4 '
           >
-            <img src='/logo.png' alt='logo' className='w-[5rem] h-[5rem] sm:w-[10rem] sm:h-[10rem]' />
+            <img src={photography? '/logo_dark.png' : '/logo.png'} alt='logo' className='w-[5rem] h-[5rem] sm:w-[10rem] sm:h-[10rem]' />
             <p className={`text-[12px] sm:text-[22px] 
               ${photography ? "text-[#808080] group-hover:text-[#4D4D4D]" : "text-gray group-hover:text-green"}  font-bold`}>
               zerogtiger
