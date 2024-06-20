@@ -51,6 +51,13 @@ export default function Content() {
               A photorealistic landscape created with procedural textures in Blender.
             </p>
           </div>
+          <div>
+            <p>
+                <Link href={'https://qbox.zerotiger.ca/login'} className="font-bold" target="_blank">Box of Questions</Link>
+              <br />
+              A (temporarily) Chinese web-app to collect anonymous questions from your friends.
+            </p>
+          </div>
         </section>
       </div>
     </main >
