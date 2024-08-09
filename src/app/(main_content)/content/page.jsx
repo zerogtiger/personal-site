@@ -55,7 +55,7 @@ export default function Content() {
             <p>
                 <Link href={'https://qbox.zerotiger.ca/login'} className="font-bold" target="_blank">Box of Questions</Link>
               <br />
-              A (temporarily) Chinese web-app to collect and answer anonymous questions from your friends.
+              [UNDER MAINTENANCE] A (temporarily) Chinese web-app to collect and answer anonymous questions from your friends.
             </p>
           </div>
         </section>
