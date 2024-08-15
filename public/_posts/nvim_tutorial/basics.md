@@ -9,21 +9,21 @@ twitter_image: assets/intro/setup.png
 
 This article will introduce vim keybindings (aka. how to navigate and use the editor).
 
-If you would like something that's longer, but more interactive, consider typing `:Tutor<ENTER>` after entering Neovim from the steps below.
+If you would like something that's longer, but more interactive, consider typing `:Tutor<ENTER>` after entering Neovim from the steps listed in the "Keybinding basics" section.
 
 ## Conventions for describing keybinds
 
 There will be lots of keybindings introduced in this article, shown in the form `...`. This suggests that you should press these keys in order. For instance, `dF3` means you should press the `d` key, `F` (note the capitalization, either done by `SHIFT` + `f` or `CAPS LOCK` `f` `CAPS LOCK`), then `3` key on your keyboard, in that order.
 
-Sometimes, a functional key should be pressed. Any key in `< >` brackets will refer to that key on the keyboard and not those keys in order. For instance, `<CTRL>r` means you should press two keys: `CTRL` and `r` in order.
+Sometimes, a functional key should be pressed (and held) in a series of keybind. Any key in `< >` brackets will refer to that key on the keyboard and not individual letter keys in order. For instance, `<CTRL>r` means you should press two keys: `CTRL` and `r` while holding the `CTRL` key, in order.
 
 ## Keybinding basics
 
 To enter the editor, type `nvim` (or `nvim <FILE NAME>` if you wish to start editing a certain file). 
 
-Unlike conventional editors, all editing could (and should) be done via the keyboard only. This is, of course, in pure pursuit of editing efficiency (as moving your hands from the home row of keys take time). 
+Unlike conventional editors, all editing in Neovim could (and should) be done via the keyboard only. This is, of course, in pure pursuit of editing efficiency (as moving your hands away from the home row of keys to reach for your mouse takes time). 
 
-However, the goal of a computer is to serve the user and the user shouldn't be limited on how they "should" interact with the computer. Thus, I recommend first restricting yourself to navigating with efficient keybinds, then interacting with the editor however you want after you are familar with them.
+However, if the goal of a computer is to serve the user, then the user shouldn't be limited on how they "should" interact with the computer. Thus, I recommend first restricting yourself to navigating with efficient keybinds, then interacting with the editor however you want after you are familiar with them so you can find your own style of navigation that's both comfortable and efficient.
 
 If you started the editor with `nvim` without a file name, copy the following dummy text into your editor by first selecting all the text, then enter your terminal and press `i`, followed by `<CTRL>v` (or `<CMD>v` on macOS), followed by `<ESC>`. Your editor should now contain the dummy text.
 
@@ -247,9 +247,9 @@ To move the cursor around, you may use
 - `k`: up
 - `l`: right
 
-This serves as the basic set of movements. You may notice your cursor can only move to location with text. 
+This serves as the basic set of movements. You may notice your cursor can only move to location with characters, and not into empty space. 
 
-To remember these, `h` and `l` are the leftmost and rightmost of keys, corresponding to left and right cursor movement. 
+To remember these, `h` and `l` are the leftmost and rightmost of these four keys, corresponding to left and right cursor movements. 
 
 As for `j` and `k`, note that `j` reaches downwards and thus moves the cursor downwards, whereas `k` reaches upwards, and thus moves the cursor upwards. 
 
@@ -257,7 +257,292 @@ Play around with these 4 keys and try to navigate to the `)` character in `struc
 
 #### Horizontal movements
 
-This section will detail moving along the same line.
+This section will detail moving along the same line of text. 
+
+Although you can navigate along a single line with repeated `h` and `l` presses, this is slow. 
+
+To navigate to the very first character of the line, press `0`.
+
+To navigate to the first non-whitespace character of the line, press `_` (first hold `<SHIFT>`, then the key to the right of `0`).
+
+To navigate to the end of the line, press `$`.
+
+The above 3 keybinds are illustrated below, where `^` indicates where the cursor is
+```
+    word1 word2 word3;
+^   ^                ^
+0   _                $
+```
+
+##### Single word movments
+To navigate the start of the next word, press `w`. Note that this movement will continue to work even at the end of a line. 
+
+```
+word1 word2 ...  -[w]->  word1 word2 ...
+  ^                            ^
+```
+The opposite movement to `w` is `b`, which will move the cursor to the beginning of the current word or the beginning of the previous word depending on the position of the cursor. 
+```
+word1 word2 ...  -[b]->  word1 word2 ...
+         ^                     ^
+
+word1 word2 ...  -[b]->  word1 word2 ...
+      ^                  ^      
+```
+
+A similar keybinding to `w` is `e`. Instead of moving to the start of the next word, it will move to the end of the current word or the end of the next word, depending on the position of the cursor. 
+```
+word1 word2 ...  -[e]->  word1 word2 ...
+  ^                          ^  
+
+word1 word2 ...  -[e]->  word1 word2 ...
+    ^                              ^
+```
+The opposite movement to `e` is `ge`, which will move the cursor to the end of the previous word. This is certainly the least used of the 4 horizontal movements introduced.
+```
+word1 word2 ...  -[ge]->  word1 word2 ...
+       ^                      ^ 
+```
+##### Searching movements
+Searching movements move the cursor to a the first specified character in either direction. 
+
+`f` will move the cursor to the first character typed after it in the forward direction on the same line. If no more of the character exists in this direction on this line, the cursor will not move. 
+
+For instance, `f=` will move the cursor to the first occurence of `=` on the same line in the forward direction. 
+```
+pair<double, double> p = {1.0, 2.0};
+   ^                                  -[f=]->  
+pair<double, double> p = {1.0, 2.0};
+                       ^
+```
+The opposite movement is `F`, illustrated below
+```
+pair<double, double> p = {1.0, 2.0};
+                                 ^    
+(F=)
+pair<double, double> p = {1.0, 2.0};
+                       ^
+```
+
+To move to, but not onto the character, use `t` instead. 
+```
+pair<double, double> p = {1.0, 2.0};
+   ^                                  -[t=]->  
+pair<double, double> p = {1.0, 2.0};
+                      ^
+```
+Notice the cursor after the movement sits one character before the `=` sign.
+
+The opposite movement is `T`, illustrated below. 
+```
+pair<double, double> p = {1.0, 2.0};
+                                 ^    
+pair<double, double> p = {1.0, 2.0};
+                        ^
+```
+Similarly, notice the cursor sits one character after the `=` sign.
+
+Say you wish to repeatedly move forward through many `=` signs on the same line. You can repeat the action with `;` and move in the reverse direction with `,` (comma).
+
+```
+p = q = r = s = t = {1.0, 2.0};
+^                             
+(f=)
+p = q = r = s = t = {1.0, 2.0};
+  ^                           
+(;)
+p = q = r = s = t = {1.0, 2.0};
+      ^                       
+(;)
+p = q = r = s = t = {1.0, 2.0};
+          ^             
+(,)
+p = q = r = s = t = {1.0, 2.0};
+      ^                       
+(,)
+p = q = r = s = t = {1.0, 2.0};
+  ^                           
+```
+Note that the reverse movement will default to the reverse of the original. That is, `f` reverses with `F`, and `t` reverses with `T`
+
+You can also initiate a movement with a backward movement (`F` of `T`), which result in the repeat movements triggered by `;` to be searching backwards, and the reverse movements triggered by `,` to be searching forwards.
+
+##### Horizontal bridge to insert mode
+Say you wish to insert at the first non-whitespace character of line, instead of pressing `_i`, you can simply use `I`.
+
+Similarly, if you wish to insert at the end of the line, instead of `$a`, `A` is more convenient. 
+```
+    word1 word2 word3;
+    ↖                ↗
+    I                A
+```
+## Modes
+There are 4 main modes to `Neovim`: 
+- **Normal** 
+
+    Normal mode allows you to freely navigate around the shown buffer(s) (opened files) with vim motions and allow you to enter other modes listed below.
+
+    You are unable to make any changes to the file while in this mode. 
+
+To exit out of any of the following modes into Normal mode, press `<ESC>`.
+- **Insert**
+
+    This mode allows you to modify the current buffer.
+
+    Enter this mode with `i` or `a`. The difference between these two keybinds is `i` will place the insertion cursor before the current character, while `a` will place it after. 
+
+- **Replace**
+
+    This mode will overwrite the characters under the cursor with what you enter and move the cursor along. Note that `<backspace>` in this mode will replace what's currently written with the original character.
+
+    Enter this mode with `R`.
+
+- **Visual**
+
+    This mode allows selection of characters with the cursor. The location the cursor when entering this mode will mark one of the endpoints of the selection. 
+
+    Enter this mode with `v`.
+
+- **Command**
+
+    This mode allows the user to interact with the editor itself like a command line interface to perform more complex actions. 
+
+    Enter this mode with `:`. You'll notice your active buffer (current "thing" you're editing) is located at the very bottom of the window. 
+
+- **Operator-Pending** (O-Pending)
+
+    This mode is automatically entered when Neovim is waiting for portions of an unfinished motion. When the entire expected command is entered, it will perform the specified motions and exit automatically.
+
+    If you want to cancel an unfinished command, you can manually exit this mode by pressing `<ESC>`, identical to the above modes. 
+
+
+## Anatomy of a Vim motion
+
+All vim motion commands come in the following form
+```
+<Command> <Count> <Motion>
+```
+
+`<Command>` and `<Count>` are not always necessary, but all motions must include a `<Motion>`. 
+
+`<Command>` is used when you wish to perform a certain action aside just moving your cursor with your motion. Common commands include
+- Delete (`d`)
+- Change (`c`)
+- Yank (`y`)
+- Select (`v`)
+
+A brief note on yank: it is similar to copy, but slightly different as we'll introduce in the next article of this series. 
+
+`<Count>` essentially specifies a loop. It will repeat the specified command with the specified motion `<Count>` number of times. 
+
+If a `<Count>` is not included, it will default to 1.
+
+#### Vertical movements
+
+Aside from the `j` and `k` keys to move the cursor up and down the file, here are a few additional motions that deal with vertical movements. 
+
+To move the cursor to the very top of the current view of the document, use `H`, abbreviated from "High".
+
+Similarly, use `M` for the middle line of the view, and `L`, respectively abbreviated from "Middle" and "Low."
+
+These motions are illustrated below. Say your view comprises of line 1 to line 10.
+
+```
+Line 1 <-- (H)
+Line 2
+Line 3
+Line 4
+Line 5 <-- (M)
+Line 6
+Line 7
+Line 8
+Line 9
+Line 10 <-- (L)
+```
+
+These, however, only deal with vertical movements in the current view of the document. To scroll around the view, instead of moving the cursor to the bottom (or top) of the current view to force the view to shift, try the following:
+
+To scroll to the beginning of the file, use `gg` and to reach the end, use `G`. 
+
+To remember these two movements, notice `g` (the character) looks like a balloon, which floats upwards in the direction of the beginning of the file, while `G` is a popped balloon and sinks. 
+
+Note this scrolling action (and all other scrolling actions) is instant and there are no transitions, which can be disorienting might need some getting-used-to. 
+
+`<CTRL>f` will perform a "full-page scroll" downwards, while `<CTRL>b` will perform a "full-page scroll" upwards. These are abbreviated from "forward" and "back." 
+
+Note that it will leave two lines in common between each scroll, as illustrated below: 
+
+```
+Line 1
+Line 2 ───╮
+Line 3    │
+Line 4    │
+Line 5    │Original view
+Line 6    │
+Line 7    │
+Line 8 ───┼──╮
+Line 9 ───╯  │
+Line 10      │
+Line 11      │View after <CTRL>f
+Line 12      │
+Line 13      │
+Line 14      │
+Line 15 ─────╯
+Line 16
+Line 17
+Line 18
+```
+
+
+`<CTRL>d` will perform a "half-page scroll" downwards, while `<CTRL>u` will perform a "half-page scroll" upwards. These are abbreviated from "down" and "up." 
+
+```
+Line 1
+Line 2 ───╮
+Line 3    │
+Line 4    │
+Line 5    │Original view
+Line 6 ───┼──╮
+Line 7    │  │
+Line 8    │  │
+Line 9 ───╯  │
+Line 10      │View after <CTRL>f
+Line 11      │
+Line 12      │
+Line 13 ─────╯
+Line 14
+Line 15
+Line 16
+Line 17
+Line 18
+```
+
+If you find you only with to scroll a few lines up or down, try `<CTRL>e` to scroll the view down by a single line. Opposingly, try `<CTRL>y` for a single line scroll upwards.
+
+Remember these two actions by noticing `e` is close to `d` on a QWERTY keyboard, and thus, scrolls the view down, while `y` is located close to `u`, which scrolls the view upwards. 
+
+Lastly, if you wish to go to a specific line, simply enter command mode and type the line you wish to reach.
+
+For instance, if you wish the cursor to jump to line 100, simply type `:100<ENTER>`.
+
+### Transitioning from normal to insert mode
+
+You are now aware of `i`, `a`, `I`, and `A` to enter insert mode from normal mode. There are a few other keybinds that can make this transition while performing some certain action. 
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
 
 
 
