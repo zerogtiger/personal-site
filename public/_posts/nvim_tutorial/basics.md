@@ -367,6 +367,25 @@ Note that the reverse movement will default to the reverse of the original. That
 
 You can also initiate a movement with a backward movement (`F` of `T`), which result in the repeat movements triggered by `;` to be searching backwards, and the reverse movements triggered by `,` to be searching forwards.
 
+Another useful searching movement is `%`, which jumps to the matching bracket to the bracket that's under the cursor. If there is no bracket under the cursor, it will jump to the matching bracket to the next bracket on the current line. This is illustrated below
+```
+void print(int num);
+       ^
+(%)
+void print(int num);
+                  ^
+```
+This works for all kinds of brackets, including `()`, `[]`, `{}`, and `<>`. Note that the matching bracket doensn't necessarily have to be on the same line. The `%` movement will also work for brackets on different lines, such as a Java Scrip object like the following:
+```javascript
+time = {
+    "hour": 12,
+    "minute": 30,
+    "second": 23
+}
+```
+
+As you can imagine, this is very useful for finding mismatched brackets in a file. 
+
 ##### Horizontal bridge to insert mode
 Say you wish to insert at the first non-whitespace character of line, instead of pressing `_i`, you can simply use `I`.
 
@@ -527,8 +546,31 @@ For instance, if you wish the cursor to jump to line 100, simply type `:100<ENTE
 
 ### Transitioning from normal to insert mode
 
-You are now aware of `i`, `a`, `I`, and `A` to enter insert mode from normal mode. There are a few other keybinds that can make this transition while performing some certain action. 
+You are now aware of `i`, `a`, `I`, and `A` to enter insert mode from normal mode. There are a few other keybindings that can make this transition while performing some certain action. 
 
+If you wish to select a portion of text, delete it, then entering insert mode, you could try the command `c`, followed by a motion. 
+
+For instance, to remove a word and enter insert mode, you would press `cw`.
+
+A similar commonly used command is for removing the rest of the line after the cursor, then entering insert mode: `C`.
+
+To delete the character under the cursor, then enter insert mode, try `s`. 
+
+A similar command is to delete the entire line and enter insert mode via `S`.
+
+### Deletion commands
+
+If you simply wish to delete a character without entering insert mode, try `x`, which deletes the character sitting under your cursor. `D` produces the same effect. 
+
+If you wish to delete the entire line, including the return character at the end, try `dd`. 
+
+## Putting things together
+
+After these separate introduction to commands and motions making up a "vim motion," it's helpful to see a few useful examples to serve as a starting point and as illustrative examples:
+
+- `dj`: deletes the current and next line
+- `vt(`: select the characters starting from the cursor until before the next opening parenthesis(`(`)
+- `vi(` / `ci(` / `di(`: selects/changes/deletes the content bounded by the innermost set of `()`.
 
 
 
