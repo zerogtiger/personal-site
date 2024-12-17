@@ -73,7 +73,7 @@ export default function PhotoDetails({
             />
           </div>
           <div className="mx-3 -border-2 h-1/5">
-            <h1 className="text-black leading-6 sm:leading-7 -border h-fit text-xl sm:text-4xl mt-0 mb-1 sm:mt-0 sm:mb-2 sm:h-1/3">{photoDetails.description}</h1>
+            {photoDetails.description ? <h1 className="flex items-center -border text-black leading-6 sm:leading-7 -border h-fit text-xl sm:text-3xl mt-0 mb-2 sm:mt-0 sm:mb-0 align-middle sm:h-1/3">{photoDetails.description}</h1> : <div className="mt-3"></div>}
             <div className="flex h-2/3">
               <div className="w-1/2 -border-2 text-sm">
                 <table className="text-left items-start">
@@ -87,7 +87,7 @@ export default function PhotoDetails({
                     </tr>
                     <tr>
                       <th><FontAwesomeIcon icon={faCalendar} /> </th>
-                      <th className="font-normal text-[7pt] leading-3 sm:leading-5 sm:text-sm"> {(new Date(photoDetails.date)).toDateString()} | {(new Date(photoDetails.time)).toLocaleTimeString()}</th>
+                      <th className="font-normal text-[7pt] leading-3 sm:leading-5 sm:text-sm"> {(new Date(photoDetails.date.slice(0, 23))).toDateString()} | {(new Date(photoDetails.time.slice(0, 23))).toLocaleTimeString()}</th>
                     </tr>
                     <tr>
                       <th><FontAwesomeIcon icon={faCamera} /></th>
