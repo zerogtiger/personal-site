@@ -11,10 +11,8 @@ This tutorial series aims to guide you in building an **efficient, tailored** ed
 ## Goal of this series
 
 To code and navigate your code as fast as thought. Specifically, the goals of this series are
-<ol>
-<li>Build a fast coding editor tailored to your specific needs</li>
-<li>Increase your coding efficiency by using your own editor</li>
-</ol>
+1. Build a fast coding editor tailored to your specific needs</li>
+2. Increase your coding efficiency by using your own editor</li>
 
 and these two goals should interest you if you are
 - Looking to build code projects faster

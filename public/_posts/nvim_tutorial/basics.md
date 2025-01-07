@@ -7,13 +7,21 @@ twitter_image: assets/intro/setup.png
 
 ## Goal of this article
 
-This article will introduce vim keybindings (aka. how to navigate and use the editor).
+This article will serve as a brief introduction to vim keybindings (aka. how to navigate and use 
+the editor) and a shorter, non-interactive substitution to Neovim's interactive tutorial. 
 
-If you would like something that's longer, but more interactive, consider typing `:Tutor<ENTER>` after entering Neovim from the steps listed in the "Keybinding basics" section.
+This article is mainly for those who wish to go fast. If you would like to take your time to learn 
+the editor, consider typing `:Tutor<ENTER>` after entering Neovim from the steps listed in the 
+"Keybinding basics" section for Neovim's interactive tutorial.
+
+Once you've completed the tutorial, feel free to move on to the next article in this series.
 
 ## Conventions for describing keybinds
 
-There will be lots of keybindings introduced in this article, shown in the form `...`. This suggests that you should press these keys in order. For instance, `dF3` means you should press the `d` key, `F` (note the capitalization, either done by `SHIFT` + `f` or `CAPS LOCK` `f` `CAPS LOCK`), then `3` key on your keyboard, in that order.
+There will be lots of keybindings introduced in this article, shown in the form `...`. This 
+suggests that you should press these keys in order. For instance, `dF3` means you should press the 
+`d` key, `F` (note the capitalization, either done by `SHIFT` + `f` or `CAPS LOCK` `f` `CAPS 
+LOCK`), then the `3` key on your keyboard, in that order.
 
 Sometimes, a functional key should be pressed (and held) in a series of keybind. Any key in `< >` brackets will refer to that key on the keyboard and not individual letter keys in order. For instance, `<CTRL>r` means you should press two keys: `CTRL` and `r` while holding the `CTRL` key, in order.
 
@@ -249,9 +257,10 @@ To move the cursor around, you may use
 
 This serves as the basic set of movements. You may notice your cursor can only move to location with characters, and not into empty space. 
 
-To remember these, `h` and `l` are the leftmost and rightmost of these four keys, corresponding to left and right cursor movements. 
-
-As for `j` and `k`, note that `j` reaches downwards and thus moves the cursor downwards, whereas `k` reaches upwards, and thus moves the cursor upwards. 
+To remember these,
+- `h` and `l` are the leftmost and rightmost of these four keys, corresponding to left and right cursor movements. 
+- note that `j` reaches downwards and thus moves the cursor downwards, and
+- `k` reaches upwards, and thus moves the cursor upwards. 
 
 Play around with these 4 keys and try to navigate to the `)` character in `struct Node *add(struct Node *n1lst, struct Node *n2lst)` (you may need to scroll down to see this function.
 
