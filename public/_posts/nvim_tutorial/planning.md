@@ -1,5 +1,8 @@
 # Code as fast as thought: a beginner's guide to building a tailored editor with Neovim
 
+`nvim --clean`
+
+`ffmpeg -i fterm.webm  -filter:v scale=900:-1 -pix_fmt rgb8 -r 10 output.gif && gifsicle -O3 output.gif -o fterm.gif`
 
 Sections:
 - Intro
@@ -34,6 +37,12 @@ Sections:
     - Notation:
         - `<...>` means the literal key on keyboard (Ex. `<Tab>`, `<Ctrl>`, `<Space>`)
         - Command: type `:` before the command for it to show in nvim's command mode
+    - Components of the editor  
+        - Buffer
+        - Pane
+        - Status Bar
+            - each component meaning
+        - Command
     - Mode (What are the modes, usage, entering and exiting them) (https://www.warp.dev/terminus/vim-modes)
         - Graph of all modes
         - Normal

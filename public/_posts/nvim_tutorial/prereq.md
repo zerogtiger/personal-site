@@ -56,7 +56,7 @@ On macOS, edit the `.zshrc` file found in your home directory and add `export PA
 
 On Linux, edit the `.bashrc` file found in your home directory and add `export PATH="<path-to-directory>:$PATH"`, save the file, then restart the terminal. 
 
-For Windows users, follows [this guide](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
+For Windows users, follow [this guide](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 </details>
 
 ## Package installation

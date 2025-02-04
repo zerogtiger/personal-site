@@ -75,53 +75,60 @@ Occasionally, parts in an article may contain one or both of the following
 Here are some Neovim features that I use on a daily basis:
 
 - Quickly switching between files with Telescope.nvim:
+![telescope](assets/intro/telescope.gif)
 
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/telescope.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/telescope.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 - Quickly add, move, and delete panes:
-
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/panes.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+![panes](assets/intro/panes.gif)
+<!---->
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/panes.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 - Undo to arbitrary points in my editing history with Undotree:
-
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/undotree.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+![undotree](assets/intro/undotree.gif)
+<!---->
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/undotree.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 - Write math equations in LaTeX documents with autosnippets:
+![snippets](assets/intro/snippets.gif)
 
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/snippets.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/snippets.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 - Use macros to finish tedius, time-consuming tasks quickly: 
+![macros](assets/intro/macros.gif)
 
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/macros.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/macros.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 - Use the floating terminal to finish quick tasks without exiting the editor:
+![fterm](assets/intro/fterm.gif)
 
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/fterm.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/fterm.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 - Play games:
+![tetris](assets/intro/tetris.gif)
 
-<video autoplay="autoplay" loop muted>
-    <source src="assets/intro/tetris.webm" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<!-- <video autoplay="autoplay" loop muted> -->
+<!--     <source src="assets/intro/tetris.webm" type="video/mp4"> -->
+<!--     Your browser does not support the video tag. -->
+<!-- </video> -->
 
 ## Give me the code
 
@@ -141,6 +148,8 @@ Here is a brief overview of the setup used in this series:
 ## Finding help
 
 If you ever find yourself stuck in a specific part of an article, take it as a great opportunity to train your Google-fu.
+
+!!!UPDATE
 
 <details>
 <summary>Wait, this sounds so irresponsible</summary> 
