@@ -20,8 +20,8 @@ export default function Contact() {
         <p>You will definitely receive a reply from me, most likely within the next 48 hours. Tell me a bit about yourself and your background if you'd like, and maybe how you found this site. I'm always curious! </p>
 
 
-        Feel free to shoot me any question anonymously via my <Link
-          href={"https://qbox.zerotiger.ca/en/tiger/ask"} >Box of のuestions inbox</Link>.
+        <p>Feel free to shoot me any question anonymously via my <Link
+          href={"https://qbox.zerotiger.ca/en/tiger/ask"} >Box of のuestions inbox</Link>.</p>
         <p>Alternatively, send me a quick message below:</p>
         <ContactForm />
       </div>
