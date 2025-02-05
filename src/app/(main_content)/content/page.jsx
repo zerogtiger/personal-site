@@ -20,7 +20,7 @@ export default function Content() {
             <p>
               <Link href={'content/photography'} className="font-bold">Portfolio</Link>
               <br />
-              Photos I've taken in my recent few years of pursuit in photography. 
+              Photos I've taken in my recent few years of pursuit in photography.
             </p>
           </div>
         </section>
@@ -53,9 +53,32 @@ export default function Content() {
           </div>
           <div>
             <p>
-                <Link href={'https://qbox.zerotiger.ca/en/login'} className="font-bold" target="_blank">Box of のuestions</Link>
+              <Link href={'https://qbox.zerotiger.ca/en/login'} className="font-bold" target="_blank">Box of のuestions</Link>
               <br />
               A mobile web-app to collect and publish anonymous questions from your friends.
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2>Appendix</h2>
+          <div>
+            <p className=" -border font-bold mb-3 ">
+              88 × 31 Badge
+            </p>
+            Here are badges of a few friends
+            <p className="flex -border pt-2 mb-3 my-0">
+              <Link href={'/'} className="py-0 mr-3 my-0 font-bold">
+                <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/naesna_button.gif'} />
+              </Link>
+              <Link href={'/'} className="py-0 mr-3 my-0 font-bold">
+                <img width={88} height={31} className=" my-0 max-w-[88px]" src={'/eighteightthreeone/hxdino.gif'} />
+              </Link>
+            </p>
+            and here's mine.
+            <p className="flex -border pt-0 mb-3 my-0">
+              <Link href={'/'} className="py-2 my-0 font-bold ">
+                <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/zerotiger.gif'} />
+              </Link>
             </p>
           </div>
         </section>

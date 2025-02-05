@@ -18,7 +18,7 @@ export default function FootNav(
             href={'/'}
             className='group w-fit gap-2 space-y-4 '
           >
-            <img src={photography? '/logo_dark.png' : '/logo.png'} alt='logo' className='w-[5rem] h-[5rem] sm:w-[10rem] sm:h-[10rem]' />
+            <img src={photography ? '/logo_dark.png' : '/logo.png'} alt='logo' className='w-[5rem] h-[5rem] sm:w-[10rem] sm:h-[10rem]' />
             <p className={`text-[12px] sm:text-[22px] 
               ${photography ? "text-[#808080] group-hover:text-[#4D4D4D]" : "text-gray group-hover:text-green"}  font-bold`}>
               zerogtiger
@@ -31,41 +31,41 @@ export default function FootNav(
           <Link href={"/"}>
             <div
               className={`text-center sm:text-left group border-[1px] h-full 
-    ${photography? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
+    ${photography ? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
               <p className={`font-bold 
-                ${photography? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Home</p>
+                ${photography ? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Home</p>
               <p className={`hidden sm:inline-block 
-                ${photography? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{homePreview}</p>
+                ${photography ? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{homePreview}</p>
             </div>
           </Link>
           <Link href={"/content"}>
             <div
               className={`text-center sm:text-left group border-[1px] h-full 
-    ${photography? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
+    ${photography ? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
               <p className={`font-bold 
-                ${photography? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Content</p>
+                ${photography ? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Content</p>
               <p className={`hidden sm:inline-block 
-                ${photography? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{contentPreview}</p>
+                ${photography ? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{contentPreview}</p>
             </div>
           </Link>
           <Link href={"/contact"}>
             <div
               className={`text-center sm:text-left group border-[1px] h-full 
-    ${photography? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
+    ${photography ? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
               <p className={`font-bold 
-                ${photography? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Contact</p>
+                ${photography ? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>Contact</p>
               <p className={`hidden sm:inline-block 
-                ${photography? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{aboutPreview}</p>
+                ${photography ? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{aboutPreview}</p>
             </div>
           </Link>
           <Link href={"/about"}>
             <div
               className={`text-center sm:text-left group border-[1px] h-full 
-    ${photography? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
+    ${photography ? "border-[#999999] text-[#666666] hover:border-[#666666]" : "border-bg4 text-blue hover:border-orange"} rounded-[0.5rem] px-4 py-4 space-y-2`}>
               <p className={`font-bold 
-                ${photography? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>About</p>
+                ${photography ? "text-[#666666] group-hover:text-[#4D4D4D]" : "text-blue group-hover:text-yellow"} text-xs sm:text-[16px]`}>About</p>
               <p className={`hidden sm:inline-block 
-                ${photography? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{contactPreview}</p>
+                ${photography ? "text-[#666666] group-hover:text-black" : "text-bg4 group-hover:text-fg"}`}>{contactPreview}</p>
             </div>
           </Link>
         </div >
