@@ -37,7 +37,7 @@ export default function About() {
                 well as playing badminton and exercising.
               </p>
 
-              <p>You can find some of my work in these fields in under <Link href={"/content"} >content</Link></p>.
+              <p>You can find some of my work in these fields in under <Link href={"/content"} >content</Link>.</p>
             </div></li>
           </ul>
         </section>
