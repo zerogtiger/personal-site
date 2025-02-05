@@ -12,22 +12,25 @@ export default function NavBar(
   const pathname = usePathname();
   const [theme, setTheme] = useState(0); // 0: light; 1: dark
 
+
   useEffect(() => {
     setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 1 : 0);
   }, []);
 
   useEffect(() => {
     if (theme === 0) {
-      localStorage.theme = 'light';
+      // localStorage.theme = 'light';
+      localStorage.setItem('theme', 'light');
     } else {
-      localStorage.theme = 'dark';
+      // localStorage.theme = 'dark';
+      localStorage.setItem('theme', 'dark');
     }
     if (localStorage.theme === 'dark') {
       document.documentElement.lastElementChild.classList.add('dark');
     } else {
       document.documentElement.lastElementChild.classList.remove('dark');
     }
-  }, [theme])
+  }, [theme]);
 
   return (
     <nav className="-border flex mx-auto mt-10 justify-center items-center px-2 max-w-[53rem] gap-2 z-20 ">
