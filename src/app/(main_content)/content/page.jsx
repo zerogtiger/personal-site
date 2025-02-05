@@ -61,41 +61,18 @@ export default function Content() {
           <p><em>Coming soon: </em></p>
           <div>
             <p>
-              <Link href={'https://github.com/zerogtiger/Eleminima'} className="font-bold" target="_blank">Eliminima</Link>
+              <span className="font-bold" target="_blank">Eliminima</span>
               <br />
-              A declarative graphics compositing language built with C++ and LLVM.
+              A declarative graphics compositing language built with C++ and LLVM. Check it out on <Link href={'https://github.com/zerogtiger/Eleminima'} target="_blank">GitHub</Link>.
             </p>
           </div>
           <div>
             <p>
-              <span  className="font-bold" target="_blank">
+              <span className="font-bold" target="_blank">
                 149 Central Park North
               </span>
               <br />
-              Interior visualization of an apartment floor located in Harlem, Manhatten, NYC. 
-            </p>
-          </div>
-        </section>
-        <section>
-          <h2>Appendix</h2>
-          <div>
-            <p className=" -border font-bold mb-3 ">
-              88 × 31 Badge
-            </p>
-            Here are badges of a few friends
-            <p className="flex -border pt-2 mb-3 my-0">
-              <Link href={'/'} className="pt-0 pb-2 mr-3 my-0 font-bold">
-                <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/naesna_button.gif'} />
-              </Link>
-              <Link href={'/'} className="pt-0 pb-2 mr-3 my-0 font-bold">
-                <img width={88} height={31} className=" my-0 max-w-[88px]" src={'/eighteightthreeone/hxdino.gif'} />
-              </Link>
-            </p>
-            and here's mine.
-            <p className="flex -border pt-0 mb-3 my-0">
-              <Link href={'/'} className="py-2 my-0 font-bold ">
-                <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/zerotiger.gif'} />
-              </Link>
+              Interior visualization of an apartment floor located in Harlem, Manhatten, NYC.
             </p>
           </div>
         </section>

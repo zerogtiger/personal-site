@@ -22,15 +22,22 @@ export default function About() {
           <p>
             You can also find me on <Link target='_blank' href='https://www.linkedin.com/in/tiger-ding-16880a247/'>LinkedIn</Link> and <Link target="_blank" href='https://github.com/zerogtiger'>GitHub</Link>.
           </p>
-          <p>As for my background and interests, here they are: </p>
+          <p>As for my background and interests, </p>
           <ul>
-            <li><div><p>I am a Computer Science undergraduate student at the University of Waterloo in Ontario, Canada.</p></div></li>
+            <li><div><p>I am a undergraduate Computer Science student at the <Link href={"https://uwaterloo.ca/"} target="_blank">University of Waterloo</Link> in Ontario, Canada.</p></div></li>
             <li><div><p>I went to high school in Markham, Ontario, where I picked up a keen focus on competitive mathematics as well as competitive programming. Some of my achievements include earning group III on the <Link target="_blank" href={'https://uwaterloo.ca/'}>CSMC</Link> honor roll, as well as qualifying for the <Link target="_blank" href={'https://cms.math.ca/competitions/cmo/'}>CMO</Link> in my senior year.</p></div></li>
             <li><div><p>I was given a <Link target="_blank" href={'https://www.raspberrypi.com/'}>Raspberry Pi</Link> at a young age, and started messing around with the Debian Linux distribution, though the adventure mostly halted at trying to look cool by typing stuff in a terminal window.</p>
               <p>When I finally discovered the world of open source in high school, I naturally became a Linux enthusiast beloving the (Neo)vim editor. Even now, I still work on projects involving the Raspberry Pi platform ever so often.</p>
             </div></li>
             <li><div>
-              Some of my other hobbies include: 3D design, printing (with CAD software), and visualizations (via <Link target="_blank" href={'https://www.blender.org/'}>Blender</Link>); figure sketching; calligraphy (not done in English); photography; reading primarily classical fictional texts; as well as playing badminton and exercising.
+              <p>
+                Some of my other hobbies include 3D design, printing, and
+                visualizations (via <Link target="_blank" href={'https://www.blender.org/'}>Blender</Link>);
+                sketching; calligraphy; photography; reading primarily classical fictional texts; as
+                well as playing badminton and exercising.
+              </p>
+
+              <p>You can find some of my work in these fields in under <Link href={"/content"} >content</Link></p>.
             </div></li>
           </ul>
         </section>
