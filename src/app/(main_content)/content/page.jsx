@@ -58,6 +58,23 @@ export default function Content() {
               A mobile web-app to collect and publish anonymous questions from your friends.
             </p>
           </div>
+          <p><em>Coming soon: </em></p>
+          <div>
+            <p>
+              <Link href={'https://github.com/zerogtiger/Eleminima'} className="font-bold" target="_blank">Eliminima</Link>
+              <br />
+              A declarative graphics compositing language built with C++ and LLVM.
+            </p>
+          </div>
+          <div>
+            <p>
+              <span  className="font-bold" target="_blank">
+                149 Central Park North
+              </span>
+              <br />
+              Interior visualization of an apartment floor located in Harlem, Manhatten, NYC. 
+            </p>
+          </div>
         </section>
         <section>
           <h2>Appendix</h2>
@@ -67,10 +84,10 @@ export default function Content() {
             </p>
             Here are badges of a few friends
             <p className="flex -border pt-2 mb-3 my-0">
-              <Link href={'/'} className="py-0 mr-3 my-0 font-bold">
+              <Link href={'/'} className="pt-0 pb-2 mr-3 my-0 font-bold">
                 <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/naesna_button.gif'} />
               </Link>
-              <Link href={'/'} className="py-0 mr-3 my-0 font-bold">
+              <Link href={'/'} className="pt-0 pb-2 mr-3 my-0 font-bold">
                 <img width={88} height={31} className=" my-0 max-w-[88px]" src={'/eighteightthreeone/hxdino.gif'} />
               </Link>
             </p>
