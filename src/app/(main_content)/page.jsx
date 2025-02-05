@@ -27,7 +27,7 @@ export default function Home() {
         { /*</ul>*/}
     <br/>
         <div>
-          <p>Here are badges of a few friends' website, my own, and of Neovim.</p>
+          <p className='my-0'>Here are badges of a few friends' website, my own, and of Neovim.</p>
           <p className="flex -border pt-2 mb-3 my-0">
             <Link href={'https://naesna.es/'} target='_blank' className="pt-0 pb-2 mr-3 my-0 font-bold">
               <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/naesna_button.gif'} />
