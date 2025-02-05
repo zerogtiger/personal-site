@@ -65,28 +65,32 @@ export default function PhotoDetails({
             {inspectIndex(-1) ? <FontAwesomeIcon onClick={() => changeIndex(-1)} className="cursor-pointer" icon={faChevronLeft} /> : ""}
           </p>
         </div>
-        <div className="h-full pb-3 w-[95%]">
-          <div className="py-3 -border-2 relative top-0 mx-auto h-4/5">
+        <div className="flex flex-col h-full -border-red -border pb-3 w-[95%] ">
+
+          <div className="py-3 -border-2 relative top-0 mx-auto flex-1 flex items-center justify-center overflow-hidden">
             <img
-              className="w-full h-full object-contain m-0"
+              className="max-h-full max-w-full object-contain"
               src={`/photography/${photoDetails.file_location}`}
             />
           </div>
-          <div className="mx-3 -border-2 h-1/5">
-            {photoDetails.description ? <h1 className="flex items-center -border text-black leading-6 sm:leading-7 -border h-fit text-xl sm:text-3xl mt-0 mb-2 sm:mt-0 sm:mb-0 align-middle sm:h-1/3">{photoDetails.description}</h1> : <div className="mt-3"></div>}
-            <div className="flex h-2/3">
-              <div className="w-1/2 -border-2 text-sm">
-                <table className="text-left items-start">
+
+          <div className="mx-3 mb-3 -border-blue -border-2 h-fit">
+            {photoDetails.description ? <h1 className="flex items-center -border text-black leading-6 sm:leading-7 -border h-fit text-xl sm:text-3xl mt-0 mb-2 sm:mt-2 sm:mb-4 -border  align-middle sm:h-fit">{photoDetails.description}</h1> : <div className="mt-3"></div>}
+            <div className="flex h-fit">
+              <div className="w-1/2 h-fit -border-2 text-sm">
+                <table className="-border text-left items-start">
                   <tbody>
                     <tr className="-border">
-                      <th className="-border w-6"><FontAwesomeIcon icon={faLocationDot} /></th>
+                      <th className="-border w-6 flex items-center">
+                        <FontAwesomeIcon className="mx-[1.4px] py-1" icon={faLocationDot} />
+                      </th>
                       <th className="font-normal text-[7pt] leading-3 sm:leading-5 sm:text-sm"> {photoDetails.locations.city}, {photoDetails.locations.state}, {photoDetails.locations.country}
                         <br />
                         ({photoDetails.locations.latitude >= 0 ? `${photoDetails.locations.latitude}° N` : `${photoDetails.locations.latitude}° S`}, {photoDetails.locations.longitude >= 0 ? `${photoDetails.locations.longitude}° E` : `${photoDetails.locations.longitude}° W`})
                       </th>
                     </tr>
                     <tr>
-                      <th><FontAwesomeIcon icon={faCalendar} /> </th>
+                      <th><FontAwesomeIcon className="mx-[0.7px]" icon={faCalendar} /> </th>
                       <th className="font-normal text-[7pt] leading-3 sm:leading-5 sm:text-sm"> {(new Date(photoDetails.date.slice(0, 23))).toDateString()} | {(new Date(photoDetails.time.slice(0, 23))).toLocaleTimeString()}</th>
                     </tr>
                     <tr>
@@ -121,3 +125,11 @@ export default function PhotoDetails({
 // <FontAwesomeIcon icon={faCalendar} /> {(new Date(photoDetails.date)).toDateString()} | {(new Date(photoDetails.time)).toLocaleTimeString()}
 // <br />
 // <FontAwesomeIcon icon={faCamera} /> {photoDetails.cameras.make} {photoDetails.cameras.model}
+// 
+// <div className="py-3 border-2 relative top-0 mx-auto max-h-full flex-1">
+//   <img
+//     className="max-h-full object-contain m-0 flex-1"
+//     src={`/photography/${photoDetails.file_location}`}
+//   />
+// </div>
+
