@@ -147,9 +147,9 @@ Here is a brief overview of the setup used in this series:
 
 ## Finding help
 
-If you ever find yourself stuck in a specific part of an article, take it as a great opportunity to train your Google-fu.
-
-!!!UPDATE
+If you ever find yourself stuck in a specific part of an article and it involves component `X` of 
+Neovim, try typing `:help X`, which will redirect you to the Neovim help page. If you're unable to 
+find anything helpful, take it as a great opportunity to train your Google-fu.
 
 <details>
 <summary>Wait, this sounds so irresponsible</summary> 
