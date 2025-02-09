@@ -40,10 +40,10 @@ export default function Home() {
             </Link>
           </p>
           <p className="flex -border pt-2 mb-3 my-0 py-0">
-            <Link href={'/'} className="py-0 mr-3 my-0 font-bold ">
+            <Link href={'/'} className="py-0 pb-2 mr-3 my-0 font-bold ">
               <img width={88} height={31} className="my-0 max-w-[88px]" src={'/eighteightthreeone/zerotiger.gif'} />
             </Link>
-            <Link href={'https://neovim.io/'} target='_blank' className="py-0 mr-3 my-0 font-bold ">
+            <Link href={'https://neovim.io/'} target='_blank' className="pb-2 py-0 mr-3 my-0 font-bold ">
               <img width={88} height={31} className=" my-0 max-w-[88px]" src={'/eighteightthreeone/neovim.png'} />
             </Link>
           </p>
