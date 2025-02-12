@@ -4,42 +4,81 @@ twitter_image: assets/intro/setup.png
 ---
 # Pre-requisites
 
-## Goal of this article
+## Goal Of This Article
 
-This article covers the software requirements and knowledge needed in this series. This includes the recommended operating system, what you should know how to do with your system, shell scripting basics, and basic system understandings. 
+This article covers the software requirements and pre-requisite knowledge needed in this series. 
+This includes the recommended operating system, terminal, what you should know how to do with your 
+system, shell scripting basics, and basic system understandings. 
 
-## Operating system
+## Operating System
 
 **Prerequisite:** your operating system is a UNIX variants, such as macOS or a distribution of Linux.
 
-This is because Neovim's predecessor, Vim, is an UNIX native software. Thus, Neovim, its fork, as well as its associated plugins naturally has the best support for UNIX variants.
+This is because Neovim's predecessor, Vim, is an UNIX native software. Thus, Neovim, its fork, as 
+well as its associated plugins naturally has the best support for UNIX variants.
 
 Unfortunately, Windows does not make this list.
 
 <details>
 <summary>For Windows users</summary>
 
-If you are a Windows user, certain specific steps in the guide may differ for you and certain features may not be available, or requires a great deal of effort to get working. There may be occasional tips throughout this guide if you are working with Neovim natively on Windows, but they will likely not apply to all steps. 
+If you are a Windows user, certain specific steps in the guide may differ for you and certain 
+features may not be available, or requires a great deal of effort to get working. There may be 
+occasional tips throughout this guide if you are working with Neovim natively on Windows, but they 
+will likely not apply to all steps. 
 
 If you are using Windows but would still like to follow a guide with a UNIX operating system, you have a few alternatives. 
 1. Duel-booting a Linux distribution such as Ubuntu on your Windows laptop. 
 
-    Most modern Windows machines support this option. Given that I have little hands-on experience with this option, I recommend [this guide](https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/).
+    Most modern Windows machines support this option. Given that I have little hands-on experience 
+    with this option, I recommend [this 
+    guide](https://www.freecodecamp.org/news/how-to-dual-boot-windows-10-and-ubuntu-linux-dual-booting-tutorial/).
 
-    **Warning**: there are many drawbacks associated with this option. For instance, you run the risk of breaking your existing operating system (and this is especially bad if you're playing with your working laptop).
+    **Warning**: there are many drawbacks associated with this option. For instance, you run the 
+    risk of breaking your existing operating system (and this is especially bad if you're playing 
+    with your working laptop).
 
-    If you are just here to try it out and is not fully committed to having an entire separate operating system on your laptop, see the next option. 
+    If you are just here to try it out and is not fully committed to having an entire separate 
+    operating system on your laptop, see the next option. 
     
-1. If you are not committed enough to out with the project, I recommend using a virtual machine via VirtualBox and use a popular Linux distribution such as Ubuntu. 
+1. If you are not committed enough to out with the project, I recommend using a virtual machine via 
+VirtualBox and use a popular Linux distribution such as Ubuntu. 
 
-    You may find a guide on Ubuntu's website [here](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview).
+    You may find a guide on Ubuntu's website 
+    [here](https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview).
 
-    After installation, I recommend running the virtual machine in multi-user mode (aka. non-graphical user interface) and use an SSH client, such as PuTTy, to SSH into the virtual machine from the host machine to use the editor. Non-GUI mode will conserve battery on your machine. 
+    After installation, I recommend running the virtual machine in multi-user mode (aka. 
+    non-graphical user interface) and use an SSH client, such as PuTTy, to SSH into the virtual 
+    machine from the host machine to use the editor. Non-GUI mode will conserve battery on your machine. 
 
-    To disable GUI, you may run the command `sudo systemctl set-default multi-user.target`. To re-enable it, run `sudo systemctl set-default graphical.target`. To learn how commands work, see [Command line usage]().
+    To disable GUI, you may run the command `sudo systemctl set-default multi-user.target`. To 
+    re-enable it, run `sudo systemctl set-default graphical.target`. To learn how commands work, 
+    see [Command line usage]().
     </details>
 
-## The `$PATH` variable
+## Terminal Emulator
+
+**Prerequisite:** your terminal emulator supports true color (24 bit color). 
+
+This is crucial for rendering colors correctly. Although you can move forth with a terminal without
+true color support, I strongly recommend against it.
+
+<details>
+<summary>Suggestions</summary>
+
+To test whether your terminal supports true color, enter
+```bash
+echo $COLORTERM
+```
+in your terminal window. If the output is either `truecolor` or `24bit`, you're good to go. Otherwise, read on.
+
+If you're on MacOS, the default terminal does **not** support true color. I recommend [iTerm2](https://iterm2.com/) as a drop-in replacement.
+
+If you're on Linux, chances are that your default terminal supports true color. If not, consider [Kitty](https://sw.kovidgoyal.net/kitty/) or if you have a GPU, consider [Alacritty](https://alacritty.org/)
+
+</details>
+
+## The `$PATH` Variable
 
 **Prerequisite:** you know what is the `$PATH` variable and how to add directories to your `$PATH` variable. 
 
@@ -59,7 +98,7 @@ On Linux, edit the `.bashrc` file found in your home directory and add `export P
 For Windows users, follow [this guide](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/).
 </details>
 
-## Package installation
+## Package Installation
 
 **Prerequisite:** you should have a way to install software and know how to add them to your `$PATH` variable to be used in the command line. 
 
@@ -75,7 +114,7 @@ For macOS users: Homebrew is a great option. To install it, I suggest following 
 For Windows users: unfortunately, there are no great package managers. You'll have to manage the packages manually by downloading them from the package's official website and adding it to `$PATH`.
 </details>
 
-## Command line usage
+## Command Line Usage
 
 **Prerequisite:** you have basic command line usage experience and knows basic commands such as `ls`, `cd`, the hidden directories `./` and `../`, the home directory `~/` and what they mean, how to create and remove files directories, the anatomy of a command line command (i.e., `command <options> <arguments>`; ex. `ls -la  ~/Download`), and most importantly, how to look for help (via. `man <command>`).
 

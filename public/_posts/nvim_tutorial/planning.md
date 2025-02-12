@@ -16,19 +16,19 @@
 - [x] Demo (GIFs)
 
 ## Pre-requisites
-- [ ] Goal of article
-- [ ] OS
-    - [ ] Unix variant (preferred)
-    - [ ] Windows (figure stuff out yourself; may occationally have tips)
-        - [ ] Alternate solutions: VirtualBox (talk about personal experience)
-- [ ] Install packages (ex. ripgrep)
-- [ ] Command line usage (will use throughout the series with few exceptions in tips for Windows)
-    - [ ] Calling a command (ex. `vim *file name*` or `ls -la`)
-    - [ ] Manual command
-- [ ] Shell scripting (with small tutorials)
-- [ ] Understanding of the `$PATH` variable
-- [ ] A "usable" terminal (any linux terminal should do. For MacOS users, the most user friendly alternative to the built-in terminal is iterm2).
-    - [ ] Reason: true color support
+- [x] Goal of article
+- [x] OS
+    - [x] Unix variant (preferred)
+    - [x] Windows (figure stuff out yourself; may occationally have tips)
+        - [x] Alternate solutions: VirtualBox (talk about personal experience)
+- [x] Install packages (ex. ripgrep)
+- [x] Command line usage (will use throughout the series with few exceptions in tips for Windows)
+    - [x] Calling a command (ex. `vim *file name*` or `ls -la`)
+    - [x] Manual command
+- [x] Shell scripting (with small tutorials)
+- [x] Understanding of the `$PATH` variable
+- [x] A "usable" terminal (any linux terminal should do. For MacOS users, the most user friendly alternative to the built-in terminal is iterm2).
+    - [x] Reason: true color support
 
 ## Installation
 - [ ] Goal of article
