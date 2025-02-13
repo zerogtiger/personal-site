@@ -31,20 +31,20 @@
     - [x] Reason: true color support
 
 ## Installation
-- [ ] Goal of article
-- [ ] OS based
-- [ ] Build from source
+- [x] Goal of article
+- [x] OS based
+- [x] Build from source
 
 ## (Neo)Vim Overview
-- [ ] Goal of article
-- [ ] How Neovim works
-    - [ ] Layers: terminal, neovim, plugins
-    - [ ] Cases of graphical port of neovim (why prefer terminal)
-- [ ] How Neovim starts up and how it looks for files
-    - [ ] Hint at writing configuration in built-in features and plugins
-- [ ] ? What the different terms mean: 
-    - [ ] Plugin
-- [ ] Command line usage of `nvim` command
+- [x] Goal of article
+- [x] How Neovim works
+    - [x] Layers: terminal, neovim, plugins
+    - [x] Cases of graphical port of neovim (why prefer terminal)
+- [x] How Neovim starts up and how it looks for files
+    - [x] Hint at writing configuration in built-in features and plugins
+<!-- - [ ] ? What the different terms mean:  -->
+<!--     - [ ] Plugin -->
+- [x] Command line usage of `nvim` command
 - [ ] Components of the editor  
     - [ ] Buffer
     - [ ] Pane

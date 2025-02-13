@@ -76,6 +76,8 @@ If you're on MacOS, the default terminal does **not** support true color. I reco
 
 If you're on Linux, chances are that your default terminal supports true color. If not, consider [Kitty](https://sw.kovidgoyal.net/kitty/) or if you have a GPU, consider [Alacritty](https://alacritty.org/)
 
+If you're on Windows, Windows Powershell does support true color.
+
 </details>
 
 ## The `$PATH` Variable

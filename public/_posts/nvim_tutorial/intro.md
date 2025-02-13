@@ -37,11 +37,11 @@ you will also find the content of this series interesting.
     
     Install the bare-bones Neovim editor.
 
+2. [**Neovim Overview**](overview)
+
+    Learn how Neovim works, components of the editor, its startup sequence, and how to use the `nvim` terminal command.
+
 *Coming very soon*
-
-3. **Neovim Overview**
-
-    Learn how Neovim works, its startup sequence, components of the editor, and what some of the terms mean.
 
 3. **Vim Keybindings**
 
