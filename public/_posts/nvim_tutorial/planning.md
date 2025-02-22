@@ -29,6 +29,7 @@
 - [x] Understanding of the `$PATH` variable
 - [x] A "usable" terminal (any linux terminal should do. For MacOS users, the most user friendly alternative to the built-in terminal is iterm2).
     - [x] Reason: true color support
+- [ ] ? Nerd font
 
 ## Installation
 - [x] Goal of article
@@ -45,41 +46,42 @@
 <!-- - [ ] ? What the different terms mean:  -->
 <!--     - [ ] Plugin -->
 - [x] Command line usage of `nvim` command
-- [ ] Components of the editor  
-    - [ ] Buffer
-    - [ ] Pane
-    - [ ] Status Bar
-        - [ ] each component meaning
+- [x] Components of the editor  
+    - [x] Buffer
+    - [x] Pane
+    - [x] Status Bar
+        - [x] each component meaning
         - [ ] Optional displays: git branch, changes, etc.
-    - [ ] Command line
-    - [ ] Tabline
+    - [x] Command line
+    - [x] Tabline
 
 ## Vim keybinding
-- [ ] Goal of article
-- [ ] Refer to `:Tutor`. Otherwise, continue
+- [x] Goal of article
+- [x] Refer to `:Tutor`. Otherwise, continue
 - [ ] Notation:
-    - [ ] `<...>` means the literal key on keyboard (Ex. `<Tab>`, `<Ctrl>`, `<Space>`)
+    - [x] `<...>` means the literal key on keyboard (Ex. `<Tab>`, `<Ctrl>`, `<Space>`)
     - [ ] Command: type `:` before the command for it to show in nvim's command mode
-- [ ] Mode (What are the modes, usage, entering and exiting them) (https://www.warp.dev/terminus/vim-modes)
+- [x] Mode (What are the modes, usage, entering and exiting them) (https://www.warp.dev/terminus/vim-modes)
     - [ ] Graph of all modes
-    - [ ] Normal
-    - [ ] Command
-    - [ ] Insert
-    - [ ] Replace
-    - [ ] Visual
-- [ ] Vim Motions (point to `:Tutor`)
-    - [ ] Structure of "count" "motion" "argument"
-    - [ ] Moving around (`hjkl`, jumping forward, backwards)
+    - [x] Normal
+    - [x] Command
+    - [x] Insert
+    - [x] Replace
+    - [x] Visual
+    - [x] Visual line
+- [x] Vim Motions (point to `:Tutor`)
+    - [x] Structure of "count" "motion" "argument"
+    - [x] Moving around (`hjkl`, jumping forward, backwards)
     - [ ] Undo / redo
-    - [ ] Insertion
-    - [ ] Deletion
-    - [ ] Replacement
-    - [ ] Visual select
+    - [x] Insertion
+    - [x] Deletion
+    - [x] Replacement
+    - [x] Visual select
     - [ ] Copy & pasting (to different registers)
 - [ ] Commands
-    - [ ] Difference between capitalized and lowercase first letter in commands
-    - [ ] quit out of editor
-    - [ ] write file
+    - [x] Difference between capitalized and lowercase first letter in commands
+    - [x] quit out of editor
+    - [x] write file
     - [ ] Search for match
     - [ ] Search and replace
     - [ ] increment / decrement numbers

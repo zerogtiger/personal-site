@@ -41,11 +41,11 @@ you will also find the content of this series interesting.
 
     Learn how Neovim works, components of the editor, its startup sequence, and how to use the `nvim` terminal command.
 
-*Coming very soon*
-
-3. **Vim Keybindings**
+3. [**Vim Keybindings**](keybinding)
 
     Learn to navigate the editor via Vim motions and execute basic commands.
+
+*Coming very soon*
 
 1. **Built-in features**
 

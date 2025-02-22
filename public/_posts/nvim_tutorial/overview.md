@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Neovim Overview
 twitter_image: assets/intro/setup.png
 ---
 
