@@ -385,7 +385,7 @@ Further, it correctly identifies nested brackets. For instance
     --(%)->
 
 ( ( ([()]) ) )
-    ^
+         ^
 ```
 This is particularly useful for finding mismatched brackets in a file. 
 
