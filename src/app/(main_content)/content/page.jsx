@@ -46,9 +46,9 @@ export default function Content() {
           <h2>Projects</h2>
           <div>
             <p>
-              <Link href={'content/water_canyon_landscape/water_canyon_landscape'} className="font-bold">Photorealistic canyon water landscape</Link>
+              <Link href={'content/149_central_park_north/149_cpn'} className="font-bold" target="_blank">149 Central Park North</Link> (ongoing)
               <br />
-              A photorealistic landscape created with procedural textures in Blender.
+              Interior visualization of an apartment floor located in Harlem, Manhatten, NYC.
             </p>
           </div>
           <div>
@@ -58,21 +58,19 @@ export default function Content() {
               A mobile web-app to collect and publish anonymous questions from your friends.
             </p>
           </div>
+          <div>
+            <p>
+              <Link href={'content/water_canyon_landscape/water_canyon_landscape'} className="font-bold">Photorealistic canyon water landscape</Link>
+              <br />
+              A photorealistic landscape created with procedural textures in Blender.
+            </p>
+          </div>
           <p><em>Coming soon: </em></p>
           <div>
             <p>
               <span className="font-bold" target="_blank">Eliminima</span>
               <br />
               A declarative graphics compositing language built with C++ and LLVM. Check it out on <Link href={'https://github.com/zerogtiger/Eleminima'} target="_blank">GitHub</Link>.
-            </p>
-          </div>
-          <div>
-            <p>
-              <span className="font-bold" target="_blank">
-                149 Central Park North
-              </span>
-              <br />
-              Interior visualization of an apartment floor located in Harlem, Manhatten, NYC.
             </p>
           </div>
         </section>
