@@ -65,7 +65,7 @@ There are 7 main modes to `Neovim`:
 
     word1 word2 word3;
     ↖        ↗ ↖     ↗
-     I       i  a    A
+    I       i  a    A
     ```
     Sometimes you may wish to add a new line above or below the current line and insert text there. 
     Consider using the following in that case
@@ -126,11 +126,13 @@ for your mouse takes time).
 
 <details>
 <summary>A note on human-computer interation</summary>
+
 If the goal of a computer is to serve the user, then the user shouldn't be limited on how 
 they "should" interact with the computer. Thus, I recommend first restricting yourself to 
 navigating with efficient keybinds, then interacting with the editor however you want after you are 
 familiar with them so you can find your own style of navigation that's both comfortable and 
 efficient.
+
 </details>
 
 
