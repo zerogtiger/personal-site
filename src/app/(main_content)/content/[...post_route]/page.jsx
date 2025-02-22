@@ -90,7 +90,7 @@ export default async function Post({ params }) {
             },
             code({ node, inline, className, children, ...props }) {
               return !inline ? (
-                <div className='border-y-2 border-gray px-2 py-4 w-full bg-bg2 text-fg overflow-x-scroll'>
+                <div className='border-y-2 border-gray px-2 py-4 w-full bg-bg2 text-fg overflow-x-auto'>
                   <code {...props}>
                     {children}
                   </code>

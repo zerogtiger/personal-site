@@ -26,6 +26,7 @@ export default function Home() {
         { /*<li><div>Information about me and this project</div></li>*/}
         { /*</ul>*/}
         <br />
+        <br />
         <div>
           <p className='my-0'>Here are badges of a few friends' website, my own, and of Neovim.</p>
           <p className="flex -border pt-2 mb-0 my-0 py-0">

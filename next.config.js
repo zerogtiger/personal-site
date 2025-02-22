@@ -2,6 +2,7 @@
 const nextConfig = {
   experimental: {
     serverActions: true,
+    metadataBase: new URL("https://zerotiger.ca"),
   },
 };
 

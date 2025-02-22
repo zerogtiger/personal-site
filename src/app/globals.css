@@ -69,6 +69,14 @@ body {
     @apply text-fg font-bold text-xl mt-8;
   }
 
+  main h4 {
+    @apply text-fg font-bold text-lg mt-8;
+  }
+
+  main h5 {
+    @apply text-fg font-bold text-base mt-8;
+  }
+
   main p {
     @apply text-fg my-5 text-sm sm:text-base;
   }

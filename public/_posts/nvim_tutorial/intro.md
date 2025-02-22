@@ -47,7 +47,7 @@ you will also find the content of this series interesting.
 
 *Coming very soon*
 
-1. **Built-in features**
+5. **Built-in features**
 
     Explore Neovim's built-in features, including the file explorer and global undo history, and learn how to configure them.
 
