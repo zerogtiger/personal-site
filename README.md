@@ -1,6 +1,6 @@
 # Tiger Ding's Personal Site
 
-### Visit at [zerotiger.ca](https://zerotiger.ca/)
+### Visit at [zerogtiger.com](https://zerogtiger.com/)
 
 
 Built using NextJS and styled with Tailwind CSS with PostgreSQL backend and Prisma as ORM.
